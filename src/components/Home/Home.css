@@ -1,0 +1,32 @@
+
+#inputBox{
+    width: 26%;
+    background: #f0f0f0;
+    padding: 30px;
+    border-radius: 30px;
+    margin-top: 5%;
+    margin: 5% auto;
+    min-width: 330px;
+    
+}
+
+.dv1{
+    width: 100%;
+}
+
+.inp1{
+    margin-top: 30px;
+}
+
+.inp2{
+    margin-left:  10%;
+    background-color: rgb(163, 192, 255);
+    transition: 0.2s;
+    
+}
+
+.inp2:hover{
+    transition: 0.2s;
+    background-color: rgb(100, 149, 255);
+}
+

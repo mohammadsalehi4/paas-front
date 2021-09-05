@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'lustra';
+    src: url('./Lustramd.otf');
+}
+
+
+
+.nav-bg{
+    background: #f0f0f0;
+    border-radius: 0 0 15px 15px;
+}
+.myNav :hover{
+    background-color: #d6d6d6;
+    
+}
+
+.myLink{
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.navLink{
+    margin-right: 3px;
+}
+
+#a1{
+    font-family: lustra;
+}
