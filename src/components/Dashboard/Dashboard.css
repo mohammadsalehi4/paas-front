@@ -1,0 +1,19 @@
+.siteBox{
+    background: rgb(218, 209, 255);
+    border-radius: 30px;
+    margin: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    max-width: 30%;
+    margin-left: 30%;
+}
+.siteBox p{
+    margin: 10px;
+}
+.siteBox button{
+    margin: 10px;
+}
+.progress{
+    margin: 20px;
+}

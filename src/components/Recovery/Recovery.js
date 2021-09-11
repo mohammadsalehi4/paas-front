@@ -27,7 +27,7 @@ const Recovery = () => {
         })
     }
     return (
-        <div>
+        <div  className="mainDiv">
             <div id="inputBox">
                 <h5>Recovery</h5>
                 <input placeholder="Email..." type="text" className="form-control inp1" id="userNumberBox"/>

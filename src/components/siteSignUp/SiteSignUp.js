@@ -53,7 +53,7 @@ const SiteSignUp = () => {
         })
     }
     return (
-        <div>
+        <div  className="mainDiv">
             <div id="inputBox">
                     <h5>site signup</h5>
                     <input placeholder="Phone Number..." type="text" className="form-control inp1" id="signupSiteNumberInput" />

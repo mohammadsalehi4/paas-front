@@ -26,7 +26,7 @@ const DeleteAcc = () => {
         })
     }
     return (
-        <div>
+        <div className="mainDiv">
             <div id="inputBox">
                 <h5>delete Account</h5>
                 <input placeholder="Email..." type="text" className="form-control inp1" id="EmailBox"/>

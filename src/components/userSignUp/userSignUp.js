@@ -36,7 +36,7 @@ const UserSignUp = () => {
     }
     
     return (
-        <div>
+        <div  className="mainDiv">
             <div id="inputBox">
                     <h5>user signup</h5>
                     <form>
