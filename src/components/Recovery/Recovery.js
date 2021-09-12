@@ -30,7 +30,7 @@ const Recovery = () => {
         <div  className="mainDiv">
             <div id="inputBox">
                 <h5>Recovery</h5>
-                <input placeholder="Email..." type="text" className="form-control inp1" id="userNumberBox"/>
+                <input placeholder="Number..." type="text" className="form-control inp1" id="userNumberBox"/>
                 <Button className="inp1 inp4" onClick={recovery}>send recovery link</Button>
             </div>
         </div>

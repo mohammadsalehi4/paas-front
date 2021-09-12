@@ -86,28 +86,28 @@ const Header = (props) => {
                         {mode==='user' ? 
                             <LinkContainer className="myLink" to="/addNewSite" >
                                 <Nav.Link >
-                                    add new site {' '}<i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    add new site {' '}<i class="fa fa-paperclip" aria-hidden="true"></i>
                                 </Nav.Link>
                             </LinkContainer>
                         : null}
                         {mode==='user' ? 
                             <LinkContainer className="myLink" to="/addEmail" >
                                 <Nav.Link >
-                                    add Email {' '}<i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    add Email {' '}<i class="fa fa-envelope-open-o" aria-hidden="true"></i>
                                 </Nav.Link>
                             </LinkContainer>
                         : null}
                         {mode==='user' ? 
                             <LinkContainer className="myLink" to="/changeNumber" >
                                 <Nav.Link >
-                                    change Number {' '}<i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    change Number{' '} <i class="fa fa-pencil" aria-hidden="true"></i>
                                 </Nav.Link>
                             </LinkContainer>
                         : null}
                         {mode==='user' ? 
                             <LinkContainer className="myLink" to="/deleteAccount" >
                                 <Nav.Link >
-                                    Delete Account {' '}<i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    Delete Account {' '}<i class="fa fa-times" aria-hidden="true"></i>
                                 </Nav.Link>
                             </LinkContainer>
                         : null}

@@ -45,7 +45,14 @@ const ChangeNumber = () => {
                 setCookie('mode',mode,0)
                 window.location.assign("http://localhost:3000")
             }else{
-                alert('unsuccessful')
+                if(response.data.msg==='wrong number'){
+                    alert('wrong number')
+                }
+                else if(response.data.msg==='already exist'){
+                    alert('this number is already exist')
+                }else{
+                    alert('unsuccessful')
+                }
             }
         })
     }
