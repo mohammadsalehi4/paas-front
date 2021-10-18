@@ -1,7 +1,4 @@
-@font-face {
-    font-family: 'nunito';
-    src: url('./Nunito.ttf');
-}
+
 
 #inputBox{
     width: 390px;
@@ -37,7 +34,7 @@
 #description{
     display: inline-block;
     margin-top: 80px;
-    font-family: nunito;
+    
     width: 63%;
     left: 540px;
     position: absolute;
@@ -55,34 +52,6 @@
     height:auto;
 }
 
-#recovery{
-    text-decoration: none;
-    position: relative;
-    margin-top: 16px;
-    top: 16px;
-}
-
-@media screen and (min-width: 1225px) and (max-width: 1400px) {
-    #description{
-        width: 50%;
-    }
-}
-
-@media screen and (min-width: 960px) and (max-width: 1224px) {
-    #description{
-        width: 40%;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 960px) {
-    #description{
-        width: 30%;
-        left: 500px;
-        
-    }
-    
-}
-
 @media screen and (max-width: 768px) {
     #inputBox{
         display: block;
@@ -97,5 +66,24 @@
         position: relative;
         left: 10%;
         width: 80%;
+    }
+}
+
+@media screen and (min-width: 1225px) and (max-width: 1400px) {
+    #description{
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1224px) {
+    #description{
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 960px) {
+    #description{
+        width: 30%;
+        left: 500px;
     }
 }

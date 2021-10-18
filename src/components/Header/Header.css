@@ -3,28 +3,107 @@
     src: url('./Lustramd.otf');
 }
 
+@font-face {
+    font-family: 'nunito';
+    src: url('./Nunito.ttf');
+}
+
+
 header{
-    
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    background: white;
+    opacity: 0.85;
 }
 
-.nav-bg{
-    background: #f0f0f0;
-    border-radius: 0 0 15px 15px;
-}
-.myNav :hover{
-    background-color: #d6d6d6;
-    
+#pasLink{
+    text-decoration: none;
+    color: black;
+    font-family: lustra;
+    font-size: 40px;
 }
 
-.myLink{
-    border-radius: 20px;
-    margin-right: 10px;
+#pas{
+    position: absolute;
+    margin: 12px 80px;
+    display: inline-block;
 }
 
 .navLink{
-    margin-right: 3px;
+    color: rgb(41, 41, 41);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 27px;
+    position: relative;
+    top: 22px;
+    font-family: nunito;
+    font-size: 17px;
+    margin-right: 10px;
 }
 
-#a1{
-    font-family: lustra;
+.navLink:hover{
+    background: rgb(241, 241, 241);
+    color: black;
+    transition: 0.2s;
+}
+
+#menuBox{
+    direction: rtl;
+}
+
+@media screen and (max-width:768px){
+    header{
+        position: relative;
+        opacity: 1;
+    }
+    
+    .firstLink{
+        margin-right: 0px;
+    }
+    
+    #pas{
+        width: 100%;
+        text-align: center;
+        margin: 12px 0px;
+    }
+    
+    #menuBox{
+        position: absolute;
+        left: 7%;
+        top: 20px;
+        direction: ltr;
+    }
+    #menu{
+        position: absolute;
+        text-align: center;
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(133, 133, 133);
+        border-radius: 10px;
+        width: 30px;
+        height: 30px;
+        text-align: center;        
+    }
+    #menuBox:hover #menuItems{
+        display: inline-block;
+    }
+    #menuItems{
+        display: none;
+        position: relative;
+        background-color: rgb(247, 247, 247);
+        top: 30px;
+    }
+    .navLink{
+        padding: 10px;
+        display: block;
+        border-radius: 0px;
+        top: 0px;
+        margin: 0px;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: black;
+    }
 }

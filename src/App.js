@@ -14,6 +14,8 @@ import Dashboard from './components/Dashboard/Dashboard'
 import AddEmail from './components/AddEmail/AddEmail'
 import AddNewSite from './components/AddNewSite/AddNewSite'
 import ChangeNumber from './components/ChangeNumber/ChangeNumber'
+import SiteLogin from './components/SiteLogin/siteLogin'
+import siteRecovery from './components/siteRecovery/siteRecovery'
 
 const App = () => {
 
@@ -85,6 +87,8 @@ const App = () => {
                     <Route path="/addEmail" component={AddEmail}/>
                     <Route path="/changeNumber" component={ChangeNumber}/>
                     <Route path="/addNewSite" component={AddNewSite}/>
+                    <Route path="/siteLogin" component={SiteLogin}/>
+                    <Route path="/siteRecovery" component={siteRecovery}/>
                 </main>
             <Footer/>
         </Router>

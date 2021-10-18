@@ -59,21 +59,19 @@ const Dashboard = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     
-    useEffect(()=>{
-
-    },[])
-    
     return (
         <div>
             {
-                AddedSites.map((item)=>{
+                AddedSites.map((item,index)=>{
+                    
                     return(
-                        <SiteBox Address={item.Address} Username={item.Username} key={item.Address} now={now}/>
+                        <SiteBox Address={item.Address} Username={item.Username} key={item.Address} now={now} index={index}/>
                     )
                 })
             }
         </div>
     )
 }
+
 
 export default Dashboard

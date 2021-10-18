@@ -2,13 +2,16 @@ import React from 'react'
 import './Footer.css'
 const Footer = () => {
     return (
-        <footer>
-                produced by Mohammad Salehi{' '}
-                <i className="fa fa-copyright" aria-hidden="true"></i>
+            <footer>
+                <div id="outfooter">
+                </div>
+                <p id="cpr">                
+                    CopyRighted by Mohammad Salehi{' '}
+                    <i className="fa fa-copyright ftr" aria-hidden="true"></i>
+                </p>
 
-                <a href="/contactus" className="Contact">Contact Me{' '}<i className="fa fa-telegram" aria-hidden="true"></i></a>
-                
-        </footer>
+                <a href="https://t.me/TheNewMohammad" className="Contact ftr">Telegram{' '}<i className="fa fa-telegram" aria-hidden="true"></i></a>
+            </footer>
     )
 }
 

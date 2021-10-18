@@ -1,6 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 import './SiteBox.css'
+import { Button } from 'react-bootstrap'
+
 const SiteBox = (props) => {
 
     function getCookie(cname) {
@@ -19,8 +21,9 @@ const SiteBox = (props) => {
         return ''
     }
     
-    const [code,SetCode]=useState('empty')
+    const [code,SetCode]=useState('No Code!')
     const [newTime,SetNewTime]=useState(0)
+    const [index]=useState(props.index)
     
     const getCode=()=>{
         
@@ -43,20 +46,24 @@ const SiteBox = (props) => {
 
     useEffect(()=>{
         if((newTime-props.now)<=0){
-            SetCode('empty')
+            SetCode('No Code!')
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[(newTime-props.now)])
     
     return (
         <div className="siteBox">
-            <p>Address: {props.Address}</p>
-            <p>username: {props.Username}</p>
-            <button onClick={getCode}>get Code</button>
-            <div class="progress" style={{height:"15px"}}>
-                <div class="progress-bar" style={{width:`${(newTime-props.now)*1.7}%` , height:"15px"}}></div>
+            <div id="leftDiv">
+                <h3 id="Address">{props.Address}</h3>
+                <p id="username">{props.Username}</p>
+                <Button onClick={getCode} id="getCode">get Code</Button>
             </div>
-            <h5 style={{margin:"20px"}}>code: {code}</h5>
+            <div id="rightDiv">
+                <h5 style={{margin:"20px"}} id="showCode">{code}</h5>
+            </div>
+            <div class="progress PRBox">
+                <div class="progress-bar PRBox" style={{width:`${(newTime-props.now)*1.7}%`}}></div>
+            </div>
         </div>
     )
 }

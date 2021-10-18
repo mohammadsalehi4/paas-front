@@ -1,0 +1,49 @@
+.showToken{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+    min-height: 400px;
+    box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.08);
+    padding: 16px;
+    
+}
+
+.showToken p{
+    width: 100%;
+    overflow-x:scroll;
+}
+
+.sitehomebtn{
+    width: 30%;
+    display: inline-block;
+    margin-left: 35%;
+    margin-top: 50px;
+    padding: 30px 20px;
+    border-style: none;
+    background: rgb(57, 57, 255);
+    border-radius: 20px;
+    color: white;
+    position: relative;
+}
+
+.frst{
+    margin-top: 100px;
+}
+
+.sitehomebtn:hover{
+    background: rgb(81, 81, 255);
+    transition: 0.2s;
+}
+
+.frst{
+    margin-left: 7%;
+    width: 86%;
+}
+
+@media screen and (max-width:768px) {
+    .sitehomebtn{
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 50px;
+    }
+}

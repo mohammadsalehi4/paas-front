@@ -1,7 +1,12 @@
-import React,{useState} from 'react'
-import { Button } from 'react-bootstrap'
-const SiteHome = () => {
+import React from 'react'
+import './SiteHome.css'
 
+const SiteHome = () => {
+    function copyToClipboard() {
+      navigator.clipboard.writeText(getCookie('token'))
+      document.getElementById('cpyTkn').innerHTML='copy Token to clipBoard ,(Copied)'
+    }
+  
     function getCookie(cname) {
         var name = cname + "=";
         var decodedCookie = decodeURIComponent(document.cookie);
@@ -17,19 +22,29 @@ const SiteHome = () => {
         }
         return ''
     }
-    const [showToken,SetShowToken]=useState('empty')
-    
-    const getToken=()=>{
-        SetShowToken(getCookie('token'))
-    }
-    
+    let headers="headers:{authorization:token}})"
+    let body="users:[your users Array]"
+    let req1=" axios.post('http://localhost:4000/Addprevioususers',{"
+    let req2=" users:[users Array],"
+    let req3=" {headers:{authorization: token}})"
     return (
         <div  className="mainDiv">
-            <Button>upload List</Button>
-            <Button onClick={getToken}>get Token</Button>
-            <div style={{width:"100%"}}>{showToken}</div>
+            <div className="frst">
+              <h3>how to upload preveus users:</h3><br/>
+              1-you have to save your usernames in an array.<br/>
+              2-copy the token.<br/>
+              3-make a request that has body and headers just like this:<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;{headers}<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;{body}<br/>
+              4-post the request like this:<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;{req1}<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;{req2}<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;{req3}<br/>
+            </div>
+            <button className="sitehomebtn" id="cpyTkn" onClick={copyToClipboard}>copy Token to clipBoard</button>
         </div>
     )
 }
+
 
 export default SiteHome

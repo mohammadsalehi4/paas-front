@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import axios from 'axios'
+import './SiteSignUp.css'
 const SiteSignUp = () => {
     const siteSignUp=()=>{
         const username=document.getElementById('signupSiteNumberInput').value
