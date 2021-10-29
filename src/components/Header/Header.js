@@ -35,7 +35,7 @@ const Header = (props) => {
         setCookie('token',token,0)
         setCookie('mode',mode,0)
         setLogin(false)
-        window.location.assign("http://localhost:3000")
+        window.location.assign("/")
     }
     
     useEffect(()=>{

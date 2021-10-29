@@ -1,0 +1,11 @@
+#DescriptionBox{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 70px;
+}
+
+@media only screen and (max-device-width:768px){
+    #DescriptionBox{
+        font-size: 30px;
+    }
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import axios from 'axios'
+import Address from '../../Address'
 
 const AddEmail = () => {
 
@@ -22,7 +23,7 @@ const AddEmail = () => {
 
     const Add=()=>{
         const token=getCookie('token')
-        axios.post('http://localhost:4000/AddEmail',{
+        axios.post(Address+'/AddEmail',{
             Email:document.getElementById('EmailBox').value
         },{
             headers:{
@@ -40,9 +41,9 @@ const AddEmail = () => {
     return (
         <div className="mainDiv">
             <div id="inputBox">
-                <h5>Add Email</h5>
-                <input placeholder="Email..." type="text" className="form-control inp1" id="EmailBox"/>
-                <Button className="inp1 inp4" onClick={Add}>send verify Link</Button>
+                <h5  id="titleBox">Add Email</h5>
+                <input placeholder="Email..." type="text" className="inp1" id="EmailBox"/>
+                <button className="inp2" id="getCode1" onClick={Add}>send verify Link</button>
             </div>
         </div>
     )

@@ -2,6 +2,7 @@ import axios from 'axios'
 import React,{useEffect,useState} from 'react'
 import SiteBox from '../SiteBox/SiteBox'
 import './Dashboard.css'
+import Address from '../../Address'
 const Dashboard = () => {
     
     function getCookie(cname) {
@@ -27,7 +28,7 @@ const Dashboard = () => {
     
     useEffect(()=>{
         const token=getCookie('token')
-        axios.post('http://localhost:4000/userinfo',{
+        axios.post(Address+'/userinfo',{
         },{
         headers:{
                 authorization:token
@@ -60,18 +61,19 @@ const Dashboard = () => {
     },[])
     
     return (
-        <div>
+        <div id="DashHome">
             {
                 AddedSites.map((item,index)=>{
-                    
                     return(
-                        <SiteBox Address={item.Address} Username={item.Username} key={item.Address} now={now} index={index}/>
+                        <div >
+                            <SiteBox Address={item.Address} Username={item.Username} key={item.Address} now={now} index={index}/>
+                            <div id="notif">copied to ClipBoard</div>
+                        </div>
                     )
                 })
             }
         </div>
     )
 }
-
 
 export default Dashboard

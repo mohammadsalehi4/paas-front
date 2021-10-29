@@ -3,6 +3,8 @@
     src: url('./Nunito.ttf');
 }
 
+
+
 #inputBox{
     width: 390px;
     background: white;
@@ -20,13 +22,40 @@
 }
 
 .inp1{
-    margin-top: 30px;
+    height: 38px;
+    width: 100%;
+    color: #404040;
+    background: white;
+    border: 1px solid;
+    border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+    border-radius: 5px;
+    -moz-outline-radius: 3px;
+    margin-top: 25px;
 }
 
 .inp2{
     display: block;
     width: 100%;
-    margin-top: 30px;
+    height: 38px;
+    color: white;
+    margin-top: 25px;
+    border-style: none;
+    border-radius: 7px;
+}
+
+#getCode1{
+    background: #0076bb;
+
+}
+#getCode1:hover{
+    background-color: #003757;
+
+}
+
+#titleBox{
+
+    font-family: nunito;
+    font-weight: bold;
 }
 
 .inp2:hover{
@@ -34,7 +63,7 @@
     background-color: rgb(100, 149, 255);
 }
 
-#description{
+#description11{
     display: inline-block;
     margin-top: 80px;
     font-family: nunito;
@@ -42,6 +71,7 @@
     left: 540px;
     position: absolute;
     padding: 30px;
+    height: 480px;
 }
 
 
@@ -60,27 +90,46 @@
     position: relative;
     margin-top: 16px;
     top: 16px;
+    color: #003757;
 }
 
+#notif{
+    position: fixed;
+    top: 120px;
+    width: 40%;
+    left: 30%;
+    text-align: center;
+    background: rgb(68, 68, 255);
+    padding: 40px 0px;
+    border-radius: 30px;
+    color: white;
+    transition: 0.6s;
+    display: none;
+    z-index: 10;
+}
+
+
+
+
+
 @media screen and (min-width: 1225px) and (max-width: 1400px) {
-    #description{
+    #description11{
         width: 50%;
     }
 }
 
 @media screen and (min-width: 960px) and (max-width: 1224px) {
-    #description{
+    #description11{
         width: 40%;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 960px) {
-    #description{
+    #description11{
         width: 30%;
         left: 500px;
         
     }
-    
 }
 
 @media screen and (max-width: 768px) {
@@ -92,10 +141,96 @@
         margin-top: 50px;
     }
     
-    #description{
+    #description11{
         display: block;
         position: relative;
         left: 10%;
         width: 80%;
+    }
+
+    #notif{
+        top:70px
+    }
+
+}
+
+@media only screen and (min-device-width: 1225px) and (max-device-width: 1400px) {
+    #description11{
+        width: 50%;
+    }
+}
+
+@media only screen and (min-device-width: 960px) and (max-device-width: 1224px) {
+    #description11{
+        width: 40%;
+    }
+}
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 960px) {
+    #description11{
+        width: 30%;
+        left: 500px;
+        
+    }
+    
+}
+
+@media only screen and (max-device-width: 768px) {
+    #inputBox{
+        display: block;
+        width: 92%;
+        margin-left: 4%;
+        border-radius: 8px;
+        margin-top: 120px;
+        box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.04);
+        height: 680px;
+    }
+    
+    .inp1{
+        height: 120px;
+        font-size: 40px;
+        border-width: 3px;
+        border-radius: 17px;
+        margin-top: 50px;
+        position: relative;
+        top: 45px;
+    }
+    
+    .inp2{
+        height: 100px;
+        font-size: 50px;
+        border-style: none;
+        color: white;
+        border-radius: 20px;
+        margin-top: 50px;
+        position: relative;
+        top:55px
+    }
+    
+    #titleBox{
+        font-size: 40px;
+        font-family: nunito;
+        font-weight: bold;
+        top: 55px;
+    }
+    
+    #description11{
+        display: block;
+        position: relative;
+        left: 10%;
+        width: 80%;
+        font-size: 31px;
+        height: 480px;
+    }
+
+    #notif{
+        top:70px
+    }
+    .about{
+        font-weight: bold;
+    }
+    #recovery{
+        font-size: 40px;
+        top: 90px;
     }
 }

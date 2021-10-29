@@ -7,7 +7,6 @@ import UserSignUp from './components/userSignUp/userSignUp'
 import SiteSignUp from './components/siteSignUp/SiteSignUp'
 import Recovery from './components/Recovery/Recovery'
 import DeleteAcc from './components/DeleteAcc/DeleteAcc'
-import contactUs from './components/contactUs/contactUs'
 import Header from './components/Header/Header'
 import SiteHome from './components/SiteHome/SiteHome'
 import Dashboard from './components/Dashboard/Dashboard'
@@ -16,6 +15,11 @@ import AddNewSite from './components/AddNewSite/AddNewSite'
 import ChangeNumber from './components/ChangeNumber/ChangeNumber'
 import SiteLogin from './components/SiteLogin/siteLogin'
 import siteRecovery from './components/siteRecovery/siteRecovery'
+import ChangePassword from './components/changePassword/changePassword'
+import DelByLink from './components/delByLink/delByLink'
+import SetNumber from './components/setNumber/SetNumber'
+import Address from './Address'
+import Description from './components/Description/Description'
 
 const App = () => {
 
@@ -46,12 +50,12 @@ const App = () => {
     const [mode,setMode]=useState('')
     
     useEffect(()=>{
-    
+        console.log('Address:'+Address)
         const getToken=getCookie('token')
         const getMode=getCookie('mode')
 
         if(getToken&&getMode){
-            axios.post('http://localhost:4000/getdata',{
+            axios.post(Address+'/getdata',{
                 'mode':getMode,
                 'token':getToken
             })
@@ -63,7 +67,7 @@ const App = () => {
                     setlogin(false)
                     setCookie('token',getToken,0)
                     setCookie('mode',getMode,0)
-                    window.location.assign("http://localhost:3000")
+                    window.location.assign('/')
                 }
             })
         }
@@ -83,16 +87,20 @@ const App = () => {
                     <Route path="/SiteSignUp" component={SiteSignUp}/>
                     <Route path="/RecoveryAcc" component={Recovery}/>
                     <Route path="/DeleteAcc" component={DeleteAcc}/>
-                    <Route path="/contactus" component={contactUs}/>
                     <Route path="/addEmail" component={AddEmail}/>
                     <Route path="/changeNumber" component={ChangeNumber}/>
                     <Route path="/addNewSite" component={AddNewSite}/>
                     <Route path="/siteLogin" component={SiteLogin}/>
                     <Route path="/siteRecovery" component={siteRecovery}/>
+                    <Route path="/Description" component={Description}/>
+                    <Route path="/changePassword/:mode/:ID/:code" component={ChangePassword}/>
+                    <Route path="/delByLink/:Email/:code" component={DelByLink}/>
+                    <Route path="/SetNumber/:lastNumber/:newNumber/:code" component={SetNumber}/>
                 </main>
             <Footer/>
         </Router>
     )
 }
+
 
 export default App

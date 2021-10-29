@@ -33,7 +33,7 @@ footer, header, hgroup, menu, menu, section {
 body {
     line-height: 1px;
     height: 100%;
-    
+    font-family: Arial;
 }
 ol, ul {
     list-style: none;

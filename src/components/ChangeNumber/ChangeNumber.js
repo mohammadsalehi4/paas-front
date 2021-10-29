@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import axios from 'axios'
+import Address from '../../Address'
 
 const ChangeNumber = () => {
 
@@ -29,7 +30,7 @@ const ChangeNumber = () => {
     
     const Add=()=>{
         const token=getCookie('token')
-        axios.post('http://localhost:4000/newNumber',{
+        axios.post(Address+'/newNumber',{
             newNumber:document.getElementById('NumberBox').value
         },{
             headers:{
@@ -59,9 +60,9 @@ const ChangeNumber = () => {
     return (
         <div className="mainDiv">
             <div id="inputBox">
-                <h5>new Number</h5>
-                <input placeholder="Number..." type="text" className="form-control inp1" id="NumberBox"/>
-                <Button className="inp1 inp4" onClick={Add}>change Number</Button>
+                <h5  id="titleBox">new Number</h5>
+                <input placeholder="Number..." type="text" className="inp1" id="NumberBox"/>
+                <button className="inp2" id="getCode1" onClick={Add}>change Number</button>
             </div>
         </div>
     )

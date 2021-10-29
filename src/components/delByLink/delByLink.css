@@ -1,0 +1,25 @@
+#description1{
+    width: 100%;
+    text-align: center;
+    margin-top: 130px;
+    font-size: 30px;
+}
+
+#Back{
+    width: 16%;
+    margin-left: 42%;
+}
+
+@media screen and (max-width: 768px) {
+    #Back{
+        width: 50%;
+        margin-left: 25%;
+    }
+}
+
+@media only screen and (max-device-width: 768px) {
+    #Back{
+        width: 50%;
+        margin-left: 25%;
+    }
+}

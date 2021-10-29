@@ -17,11 +17,13 @@ header{
     z-index: 1;
     background: white;
     opacity: 0.85;
+    background-color: #003757;
+    color: white;
 }
 
 #pasLink{
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-family: lustra;
     font-size: 40px;
 }
@@ -33,21 +35,21 @@ header{
 }
 
 .navLink{
-    color: rgb(41, 41, 41);
+    color: rgb(255, 255, 255);
     padding: 10px;
     text-decoration: none;
-    border-radius: 27px;
+    border-radius: 12px;
     position: relative;
-    top: 22px;
+    top: 20px;
     font-family: nunito;
     font-size: 17px;
     margin-right: 10px;
 }
 
 .navLink:hover{
-    background: rgb(241, 241, 241);
-    color: black;
+    background: rgb(20, 58, 180);
     transition: 0.2s;
+    color: white;
 }
 
 #menuBox{
@@ -72,20 +74,24 @@ header{
     
     #menuBox{
         position: absolute;
-        left: 7%;
         top: 20px;
         direction: ltr;
+        color: black;
+        width: 100%;
+        
     }
     #menu{
         position: absolute;
         text-align: center;
         border-style: solid;
         border-width: 2px;
-        border-color: rgb(133, 133, 133);
+        border-color: rgb(230, 230, 230);
         border-radius: 10px;
         width: 30px;
         height: 30px;
         text-align: center;        
+        left: 7%;
+        background: rgb(230, 230, 230);
     }
     #menuBox:hover #menuItems{
         display: inline-block;
@@ -93,8 +99,12 @@ header{
     #menuItems{
         display: none;
         position: relative;
-        background-color: rgb(247, 247, 247);
+        background-color: rgb(0, 27, 77);
         top: 30px;
+        border-radius: 2px;
+        overflow: hidden;
+        width: 100%;
+        
     }
     .navLink{
         padding: 10px;
@@ -104,6 +114,80 @@ header{
         margin: 0px;
         border-bottom-style: solid;
         border-bottom-width: 1px;
-        border-bottom-color: black;
+        border-bottom-color: rgb(0, 0, 0);
+        color: white;
+    }
+}
+
+@media only screen and (max-device-width:768px){
+    header{
+        position: relative;
+        opacity: 1;
+        height: 140px;
+    }
+    
+    #pasLink{
+        font-size: 90px;
+    }
+    
+    .firstLink{
+        margin-right: 0px;
+    }
+    
+    #pas{
+        width: 100%;
+        text-align: center;
+        margin: 12px 0px;
+        top:55px;
+    }
+    
+    #menuBox{
+        position: absolute;
+        top: 20px;
+        direction: ltr;
+        color: black;
+        width: 100%;
+        
+    }
+    #menu{
+        position: absolute;
+        text-align: center;
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(230, 230, 230);
+        border-radius: 30px;
+        width: 70px;
+        height: 70px;
+        text-align: center;        
+        left: 7%;
+        top: 15px;
+        background: rgb(230, 230, 230);
+    }
+    #menuBox:hover #menuItems{
+        display: inline-block;
+        z-index: 100;
+    }
+    #menuItems{
+        display: none;
+        position: relative;
+        background-color: rgb(0, 27, 77);
+        top: 86px;
+        border-radius: 2px;
+        overflow: hidden;
+        width: 100%;
+        
+    }
+    .navLink{
+        padding: 10px;
+        display: block;
+        border-radius: 0px;
+        margin: 0px;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: rgb(0, 0, 0);
+        color: white;
+        height: 130px;
+        font-size: 70px;
+        margin-left: 20px;
     }
 }

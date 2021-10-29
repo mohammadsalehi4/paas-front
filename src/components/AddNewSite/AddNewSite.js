@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import axios from 'axios'
+import Address from '../../Address'
 
 const AddNewSite = () => {
 
@@ -22,7 +23,7 @@ const AddNewSite = () => {
 
     const Add=()=>{
         const token=getCookie('token')
-        axios.post('http://localhost:4000/AddSiteToDb',{
+        axios.post(Address+'/AddSiteToDb',{
             Address:document.getElementById('AddressBox').value,
             username:document.getElementById('UsernameBox').value,
             code:document.getElementById('CodeBox').value
@@ -51,11 +52,11 @@ const AddNewSite = () => {
     return (
         <div className="mainDiv">
             <div id="inputBox">
-                <h5>new Site</h5>
-                <input placeholder="Site Address..." type="text" className="form-control inp1" id="AddressBox"/>
-                <input placeholder="Username..." type="text" className="form-control inp1" id="UsernameBox"/>
-                <input placeholder="Code..." type="text" className="form-control inp1" id="CodeBox"/>
-                <Button className="inp1 inp4" onClick={Add} >Add Site</Button>
+                <h5 id="titleBox">new Site</h5>
+                <input placeholder="Site Address..." type="text" className="inp1" id="AddressBox"/>
+                <input placeholder="Username..." type="text" className="inp1" id="UsernameBox"/>
+                <input placeholder="Code..." type="text" className="inp1" id="CodeBox"/>
+                <button className="inp2" id="getCode1" onClick={Add} >Add Site</button>
             </div>
         </div>
     )

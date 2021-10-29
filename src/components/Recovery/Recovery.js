@@ -2,10 +2,11 @@ import axios from 'axios'
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import './Recovery.css'
+import Address from '../../Address'
 const Recovery = () => {
     const recovery=()=>{
         const number=document.getElementById('userNumberBox').value
-        axios.post('http://localhost:4000/sendrecoverylink',{
+        axios.post(Address+'/sendrecoverylink',{
             'Number':number
         })
         .then(response=>{
@@ -31,7 +32,7 @@ const Recovery = () => {
             <div id="inputBox">
                 <h5>Recovery</h5>
                 <input placeholder="Number..." type="text" className="form-control inp1" id="userNumberBox"/>
-                <Button className="inp1 inp4" onClick={recovery}>send recovery link</Button>
+                <Button className="inp1 inp4" id="getCode1" onClick={recovery}>send recovery link</Button>
             </div>
         </div>
     )

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css'
-import { Button } from 'react-bootstrap'
 import axios from 'axios'
+import Address from '../../Address'
 
 const Home = () => {
     
@@ -14,9 +14,10 @@ const Home = () => {
     }
     
     const UserLogin=()=>{
+
         const Numb=document.getElementById('getNumber').value
         const Pass=document.getElementById('getPassword').value
-        axios.post('http://localhost:4000/login',{
+        axios.post(Address+'/login',{
             'Number':String(Numb),
             'password':Pass
         })
@@ -31,22 +32,31 @@ const Home = () => {
             else{
                 document.getElementById('getPassword').value=''
                 document.getElementById('getNumber').value=''
-                alert('Login failed')
+                document.getElementById('notif').style.display="block"
+                document.getElementById('notif').innerHTML="Login failed"
+                document.getElementById('notif').style.opacity="0.6"
+                setTimeout(()=>{
+                    document.getElementById('notif').style.display="none"
+                },4000)
             }
+        })
+        .catch(err=>{
+            console.log(err)
         })
     }
     
     return (
         <div className="mainDiv">
+            <div id="notif"></div>
             <div id="inputBox">
-                <h5>login</h5>
-                <input placeholder="Phone Number..." type="text" className="form-control inp1" id="getNumber"/>
-                <input placeholder="Password..." type="password" className="form-control inp1"  id="getPassword"/>
-                <Button className="inp2" onClick={UserLogin}>User login</Button>             
+                <h5 id="titleBox">login</h5>
+                <input placeholder="Phone Number..." type="text" className="inp1" id="getNumber"/>
+                <input placeholder="Password..." type="password" className="inp1"  id="getPassword"/>
+                <button className="inp2" id="getCode1" onClick={UserLogin}>User login</button>             
                 <a href="/RecoveryAcc" id="recovery">Recovery Account</a>
             </div>
-            <div id="description">
-                <h1>about</h1>
+            <div id="description11">
+                <h1 className="about">About</h1>
                 This program gives dynamic password capability to different sites.<br/>
                 This is initial version that does not have all the features of the final version.<br/>
                 In addition to the password, you will need the code that the application generates on your account.<br/>

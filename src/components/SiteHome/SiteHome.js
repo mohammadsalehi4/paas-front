@@ -1,6 +1,6 @@
 import React from 'react'
 import './SiteHome.css'
-
+import Address from '../../Address'
 const SiteHome = () => {
     function copyToClipboard() {
       navigator.clipboard.writeText(getCookie('token'))
@@ -24,7 +24,7 @@ const SiteHome = () => {
     }
     let headers="headers:{authorization:token}})"
     let body="users:[your users Array]"
-    let req1=" axios.post('http://localhost:4000/Addprevioususers',{"
+    let req1=` axios.post('${Address}/Addprevioususers',{`
     let req2=" users:[users Array],"
     let req3=" {headers:{authorization: token}})"
     return (

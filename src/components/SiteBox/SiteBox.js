@@ -2,9 +2,18 @@ import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 import './SiteBox.css'
 import { Button } from 'react-bootstrap'
-
+import Address from '../../Address';
 const SiteBox = (props) => {
 
+    function copyToClipboard() {
+        navigator.clipboard.writeText(document.getElementsByClassName(props.Address)[0].innerHTML)
+        document.getElementById('notif').style.display="block"
+        document.getElementById('notif').style.opacity="0.6"
+        setTimeout(()=>{
+            document.getElementById('notif').style.display="none"
+        },4000)
+    }
+    
     function getCookie(cname) {
         var name = cname + "=";
         var decodedCookie = decodeURIComponent(document.cookie);
@@ -23,12 +32,11 @@ const SiteBox = (props) => {
     
     const [code,SetCode]=useState('No Code!')
     const [newTime,SetNewTime]=useState(0)
-    const [index]=useState(props.index)
     
     const getCode=()=>{
         
         const token=getCookie('token')
-        axios.post('http://localhost:4000/getcode',{
+        axios.post(Address+'/getcode',{
             'Address':props.Address
         },{
             headers:{
@@ -40,6 +48,7 @@ const SiteBox = (props) => {
                 SetCode(response.data.code)
                 const time=new Date()
                 SetNewTime((Math.floor(time.getTime()/1000))+59)
+                copyToClipboard()
             }
         })
     }
@@ -59,10 +68,10 @@ const SiteBox = (props) => {
                 <Button onClick={getCode} id="getCode">get Code</Button>
             </div>
             <div id="rightDiv">
-                <h5 style={{margin:"20px"}} id="showCode">{code}</h5>
+                <h5 style={{margin:"20px"}} id="showCode" className={props.Address}>{code}</h5>
             </div>
-            <div class="progress PRBox">
-                <div class="progress-bar PRBox" style={{width:`${(newTime-props.now)*1.7}%`}}></div>
+            <div className="progress  PRBox " id="highPR" style={{height:"10px"}}>
+                <div className="progress-bar" style={{width:`${(newTime-props.now)*1.7}%`}}></div>
             </div>
         </div>
     )
