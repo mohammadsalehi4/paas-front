@@ -1,6 +1,5 @@
 import React from 'react'
 import './siteLogin.css'
-import { Button } from 'react-bootstrap'
 import axios from 'axios'
 import Address from '../../Address'
 const SiteLogin = () => {
@@ -49,14 +48,6 @@ const SiteLogin = () => {
                 <input placeholder="Password..." type="password" className="inp1"  id="getPassword"/>
                 <button className="inp2" id="getCode1" onClick={siteLogin}>Login</button>
                 <a href="/siteRecovery" id="recovery">Recovery Account</a>
-            </div>
-            <div id="description11">
-            <h1>about</h1>
-                This program gives dynamic password capability to different sites.<br/>
-                This is initial version that does not have all the features of the final version.<br/>
-                In addition to the password, you will need the code that the application generates on your account.<br/>
-                You can download the project guide to learn about the features of the original version of the program.<br/>
-
             </div>
         </div>
     )

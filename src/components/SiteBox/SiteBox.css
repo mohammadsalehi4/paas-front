@@ -37,7 +37,7 @@
 }
 
 #rightDiv{
-    height: 200px;
+    height: 100px;
     width: 60%;
     margin-left: 5%;
     text-align: center;
@@ -46,11 +46,21 @@
 }
 .PRBox{
     height: 15px;
-    background: black;
     margin-top: 30px;
 }
 
+#Address{
+    font-size: 23px;
+    font-family: lustra;
+    margin-top: 30px;
+    
+}
 
+#username{
+    font-size: 18px;
+    font-family: nunito;
+    margin-top: 60px;
+}
 
 @media screen and (min-width: 769px) and (max-width: 960px) {
     #leftDiv{
@@ -81,6 +91,7 @@
         text-align: center;
         display: inline-block;
     }
+
 }
 
 @media screen and (max-width:768px) {
@@ -95,7 +106,7 @@
     
     #showCode{
         display: inline-block;
-        font-size: 30px;
+        font-size: 45px;
         font-family: lustra;
     }
     
@@ -123,6 +134,7 @@
     #username{
         font-size: 12px;
         font-family: nunito;
+        margin-top: 30px;
     }
     .PRBox{
         height: 10px;
@@ -139,7 +151,7 @@
         height: 70px;
         font-size: 35px;
         padding: 2px;
-        
+        margin-top: 30px;
     }
     
     #showCode{
@@ -166,12 +178,13 @@
     #Address{
         font-size: 30px;
         font-family: lustra;
-        
+        margin-top: 30px;
     }
     
     #username{
         font-size: 30px;
         font-family: nunito;
+        margin-top: 40px;
     }
     .PRBox{
         height: 10px;

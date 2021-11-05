@@ -19,7 +19,6 @@ import ChangePassword from './components/changePassword/changePassword'
 import DelByLink from './components/delByLink/delByLink'
 import SetNumber from './components/setNumber/SetNumber'
 import Address from './Address'
-import Description from './components/Description/Description'
 
 const App = () => {
 
@@ -92,7 +91,6 @@ const App = () => {
                     <Route path="/addNewSite" component={AddNewSite}/>
                     <Route path="/siteLogin" component={SiteLogin}/>
                     <Route path="/siteRecovery" component={siteRecovery}/>
-                    <Route path="/Description" component={Description}/>
                     <Route path="/changePassword/:mode/:ID/:code" component={ChangePassword}/>
                     <Route path="/delByLink/:Email/:code" component={DelByLink}/>
                     <Route path="/SetNumber/:lastNumber/:newNumber/:code" component={SetNumber}/>

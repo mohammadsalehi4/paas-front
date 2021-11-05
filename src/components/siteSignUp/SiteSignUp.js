@@ -87,7 +87,7 @@ const SiteSignUp = () => {
     return (
         <div  className="mainDiv">
             <div id="notif"></div>
-            <div id="inputBox">
+            <div id="inputBox2">
                     <h5 id="titleBox">site signup</h5>
                     <input placeholder="Phone Number..." type="text" className=" inp1" id="signupSiteNumberInput" />
                     <input placeholder="Address..." type="text" className=" inp1" id="signupSiteddressInput" />

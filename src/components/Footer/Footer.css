@@ -6,7 +6,8 @@
 #myFooter {
     background-color: #003757;
     color: white;
-    
+    height: 116px;
+    overflow-y: hidden;
 }
 
 #myFooter .footer-copyright {
@@ -57,6 +58,7 @@
     color: #d2d1d1;
     font-weight: 400;
     font-size: 15px;
+    margin-top: 50px;
 }
 
 #myFooter a:hover,
@@ -108,14 +110,25 @@
 
 .middle{
     text-align: center;
+    margin-top: 70px;
 }
-
+.middle2{
+    text-align: center;
+    display: none;
+}
+.middle1{
+    text-align: center;
+    display: none;
+}
+.middle11{
+    text-align: center;
+}
 #logo{
     font-family: lustra;
     margin-bottom: 20px;
     display: inline-block;
-    width: 20%;
-    margin-bottom: 30px;
+    width: 30%;
+    margin-top: 70px;
     font-size: 80px;
     color: white;
     text-align: center;
@@ -148,53 +161,123 @@ body{
 
 .middle{
     display: inline-block;
-    width: 20%;
+    width: 40%;
 }
 
 .beside{
     display: inline-block;
-    width: 20%;
+    width: 30%;
     height: 100px;
 }
 
 .h55{
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 17px;
 }
 
-@media screen and (max-width: 768px) {
-    .middle{
+@media screen and (max-width: 769px) {
+    #myFooter{
+        height: 500px;
+        position: absolute;
+        top: 500px;
         width: 100%;
+        overflow-y:unset;
+        
+    }
+    .middle1{
+        width: 100%;
+        font-size: 35px;
+        display: block;
+        margin-top: 0px;
+    }   
+    .middle11{
+        width: 100%;
+        font-size: 35px;
+        display: block;
+    }  
+    .middle{
+        display: none;
     }
     #logo{
         width: 100%;
+        font-size: 80px;
+        margin-top: 110px;
     }
     .beside{
         width: 100%;
         overflow-y: hidden;
+        margin-top: 40px;
+        height: 120px;
+        
     }
     
+    .h45{
+        margin-top: 50px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .h55{
+        margin-top: 60px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .grayA{
+        font-size: 37px;
+    }
 }
 
 @media only screen and (max-device-width: 769px) {
-    .middle{
+    #myFooter{
+        height: 700px;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        overflow-y:unset;
+        
+    }
+    .middle1{
         width: 100%;
         font-size: 35px;
+        display: block;
+        margin-top: 0px;
+    }   
+    .middle11{
+        width: 100%;
+        font-size: 35px;
+        display: block;
+    }  
+    .middle{
+        display: none;
     }
     #logo{
         width: 100%;
         font-size: 120px;
+        margin-top: 110px;
+        
     }
     .beside{
         width: 100%;
         overflow-y: hidden;
+        margin-top: 60px;
+        height: 150px;
     }
     
-    .h55{
+    .h45{
+        margin-top: 50px;
         font-size: 40px;
-        font-weight: bold;
+        font-weight: 400;
     }
-    
+    .h55{
+        margin-top: 80px;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    .middle11{
+        font-size: 30px;
+        font-weight: 400;
+        margin-top: 110px;
+        
+    }
     .grayA{
         font-size: 37px;
     }

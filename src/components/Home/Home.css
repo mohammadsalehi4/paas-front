@@ -15,7 +15,36 @@
     box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.04);
     display: inline-block;
     position: relative;
+    height: 270px;
 }
+
+#inputBox1{
+    height: 225px;
+    width: 390px;
+    background: white;
+    padding: 30px;
+    border-radius: 13px;
+    margin: 80px 6%;
+    min-width: 330px;
+    box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.04);
+    display: inline-block;
+    position: relative;
+}
+
+#inputBox2{
+    width: 390px;
+    background: white;
+    padding: 30px;
+    border-radius: 13px;
+    margin: 80px 6%;
+    min-width: 330px;
+    box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.04);
+    display: inline-block;
+    position: relative;
+    height: 340px;
+}
+
+
 
 .dv1{
     width: 100%;
@@ -67,17 +96,23 @@
     display: inline-block;
     margin-top: 80px;
     font-family: nunito;
-    width: 63%;
+    width: 55%;
     left: 540px;
-    position: absolute;
     padding: 30px;
-    height: 480px;
+    height: 250px;
+    
 }
 
+.descP{
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+}
 
 .mainDiv{
     height: 100%;
     margin-top: 50px;
+    height: 50px;
 }
 
 .mainDiv{
@@ -88,8 +123,7 @@
 #recovery{
     text-decoration: none;
     position: relative;
-    margin-top: 16px;
-    top: 16px;
+    top: 25px;
     color: #003757;
 }
 
@@ -108,7 +142,9 @@
     z-index: 10;
 }
 
-
+.about{
+    font-weight: bolder;
+}
 
 
 
@@ -139,6 +175,23 @@
         margin-left: 10%;
         border-radius: 8px;
         margin-top: 50px;
+        
+    }
+    #inputBox1{
+        display: block;
+        width: 80%;
+        margin-left: 10%;
+        border-radius: 8px;
+        margin-top: 50px;
+        
+    }
+    #inputBox2{
+        display: block;
+        width: 80%;
+        margin-left: 10%;
+        border-radius: 8px;
+        margin-top: 50px;
+        
     }
     
     #description11{
@@ -152,6 +205,16 @@
         top:70px
     }
 
+    #description11{
+        display: block;
+        height: 480px;
+        height: 0px;
+    }
+    
+    .descP{
+        display: none;
+    }
+    
 }
 
 @media only screen and (min-device-width: 1225px) and (max-device-width: 1400px) {
@@ -183,35 +246,55 @@
         border-radius: 8px;
         margin-top: 120px;
         box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.04);
-        height: 680px;
+        height: 625px;
+    }
+    
+    #inputBox1{
+        display: block;
+        width: 92%;
+        margin-left: 4%;
+        border-radius: 8px;
+        margin-top: 120px;
+        box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.04);
+        height: 400px;
+    }
+    
+    #inputBox2{
+        display: block;
+        width: 92%;
+        margin-left: 4%;
+        border-radius: 8px;
+        margin-top: 120px;
+        box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.04);
+        height: 700px;
     }
     
     .inp1{
-        height: 120px;
+        height: 90px;
         font-size: 40px;
         border-width: 3px;
         border-radius: 17px;
         margin-top: 50px;
         position: relative;
-        top: 45px;
+        top: 30px;
     }
     
     .inp2{
-        height: 100px;
-        font-size: 50px;
+        height: 80px;
+        font-size: 40px;
         border-style: none;
         color: white;
         border-radius: 20px;
         margin-top: 50px;
         position: relative;
-        top:55px
+        top:30px
     }
     
     #titleBox{
         font-size: 40px;
         font-family: nunito;
         font-weight: bold;
-        top: 55px;
+        margin-top: 30px;
     }
     
     #description11{
@@ -221,6 +304,7 @@
         width: 80%;
         font-size: 31px;
         height: 480px;
+        height: 0px;
     }
 
     #notif{
@@ -231,6 +315,10 @@
     }
     #recovery{
         font-size: 40px;
-        top: 90px;
+        top: 95px;
     }
+    .descP{
+        display: none;
+    }
+
 }

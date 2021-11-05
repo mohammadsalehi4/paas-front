@@ -1,7 +1,7 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
 import axios from 'axios'
 import Address from '../../Address'
+import './DeleteAcc.css'
 const DeleteAcc = () => {
     const sendMailLink=()=>{
         const number=document.getElementById('EmailBox').value
@@ -28,7 +28,7 @@ const DeleteAcc = () => {
     }
     return (
         <div className="mainDiv">
-            <div id="inputBox">
+            <div id="inputBox1">
                 <h5 id="titleBox">delete Account</h5>
                 <input placeholder="Email..." type="text" className=" inp1" id="EmailBox"/>
                 <button className="inp2" id="getCode1" onClick={sendMailLink}>send Delete Link</button>
