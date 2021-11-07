@@ -4,7 +4,7 @@ import Address from '../../Address'
 const SiteHome = () => {
     function copyToClipboard() {
       navigator.clipboard.writeText(getCookie('token'))
-      document.getElementById('cpyTkn').innerHTML='copy Token to clipBoard ,(Copied)'
+      document.getElementById('cpyTkn').innerHTML='copy Token,(Copied)'
     }
   
     function getCookie(cname) {
@@ -29,7 +29,7 @@ const SiteHome = () => {
     let req3=" {headers:{authorization: token}})"
     return (
         <div  className="mainDiv">
-            <div className="frst">
+            {/*<div className="frst">
               <h3>how to upload preveus users:</h3><br/>
               1-you have to save your usernames in an array.<br/>
               2-copy the token.<br/>
@@ -40,8 +40,8 @@ const SiteHome = () => {
               &nbsp;&nbsp;&nbsp;&nbsp;{req1}<br/>
               &nbsp;&nbsp;&nbsp;&nbsp;{req2}<br/>
               &nbsp;&nbsp;&nbsp;&nbsp;{req3}<br/>
-            </div>
-            <button className="sitehomebtn" id="cpyTkn" onClick={copyToClipboard}>copy Token to clipBoard</button>
+            </div>*/}
+            <button className="sitehomebtn" id="cpyTkn" onClick={copyToClipboard}>copy Token</button>
         </div>
     )
 }

@@ -59,7 +59,7 @@ const UserSignUp = () => {
     return (
         <div  className="mainDiv">
             <div id="notif"></div>
-            <div id="inputBox">
+            <div id="inputBox3">
                     <h5 id="titleBox">user signup</h5>
                     <form>
                     <input placeholder="Phone Number..." type="text" className="inp1" id="signupUsernameInput"/>

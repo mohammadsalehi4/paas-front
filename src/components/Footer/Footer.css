@@ -8,6 +8,7 @@
     color: white;
     height: 116px;
     overflow-y: hidden;
+    
 }
 
 #myFooter .footer-copyright {
@@ -178,8 +179,7 @@ body{
 @media screen and (max-width: 769px) {
     #myFooter{
         height: 500px;
-        position: absolute;
-        top: 500px;
+        position: relative;
         width: 100%;
         overflow-y:unset;
         
@@ -228,12 +228,12 @@ body{
 
 @media only screen and (max-device-width: 769px) {
     #myFooter{
-        height: 700px;
-        position: fixed;
+        height: 600px;
+        position: relative;
         bottom: 0px;
         width: 100%;
         overflow-y:unset;
-        
+        top:300px
     }
     .middle1{
         width: 100%;

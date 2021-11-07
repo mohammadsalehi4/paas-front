@@ -19,7 +19,6 @@ import ChangePassword from './components/changePassword/changePassword'
 import DelByLink from './components/delByLink/delByLink'
 import SetNumber from './components/setNumber/SetNumber'
 import Address from './Address'
-
 const App = () => {
 
     function getCookie(cname) {

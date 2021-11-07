@@ -12,7 +12,8 @@ const Footer = () => {
                 <div className="beside">
                     <div className="social-networks">
                         <a href="/" className="twitter"><i className="fa fa-twitter"></i></a>
-                        <a href="/" className="facebook"><i className="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/mohammad_salehi_4/" className="facebook"><i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
                         <a href="/" className="telegram"><i className="fa fa-telegram"></i></a>
                     </div>
                 </div>

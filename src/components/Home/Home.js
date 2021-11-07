@@ -61,6 +61,7 @@ const Home = () => {
                 <div className="descP">This is initial version that does not have all the features of the final version.</div>
                 <div className="descP descP1">In addition to the password, you will need the code that the application generates on your account.</div>
                 <div className="descP">You can download the project guide to learn about the features of the original version of the program.</div>
+                
             </div>
         </div>
     )

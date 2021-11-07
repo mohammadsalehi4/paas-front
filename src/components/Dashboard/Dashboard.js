@@ -24,6 +24,7 @@ const Dashboard = () => {
     const onetime=new Date()
     
     const [AddedSites,setAddedSites]=useState([])
+    const [IsSites,setIsSites]=useState(false)
     const [now,setNow]=useState(Math.floor(onetime.getTime()/1000))   
     
     useEffect(()=>{
@@ -39,6 +40,7 @@ const Dashboard = () => {
             if(response.data.success===true){
                 setAddedSites([])
                 for(let i=0;i< response.data.sites.length;i++){
+                    setIsSites(true)
                     setAddedSites(AddedSites=>[...AddedSites,
                         {
                             Address:response.data.sites[i].SiteAddress,
@@ -62,15 +64,18 @@ const Dashboard = () => {
     
     return (
         <div id="DashHome">
+            {IsSites===false ? <div id="faza"></div> : null}
             {
                 AddedSites.map((item,index)=>{
                     return(
                         <div >
                             <SiteBox Address={item.Address} Username={item.Username} key={item.Address} now={now} index={index}/>
                             <div id="notif">copied to ClipBoard</div>
+                            
                         </div>
                     )
                 })
+                
             }
         </div>
     )
