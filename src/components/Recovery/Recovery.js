@@ -1,6 +1,5 @@
 import axios from 'axios'
 import React from 'react'
-import { Button } from 'react-bootstrap'
 import './Recovery.css'
 import Address from '../../Address'
 const Recovery = () => {
@@ -29,10 +28,10 @@ const Recovery = () => {
     }
     return (
         <div  className="mainDiv">
-            <div id="inputBox">
-                <h5>Recovery</h5>
-                <input placeholder="Number..." type="text" className="form-control inp1" id="userNumberBox"/>
-                <Button className="inp1 inp4" id="getCode1" onClick={recovery}>send recovery link</Button>
+            <div id="inputBox4">
+                <h5 id="titleBox">Recovery</h5>
+                <input placeholder="Number..." type="text" className="inp1" id="userNumberBox"/>
+                <button className="inp2" id="getCode1" onClick={recovery}>send recovery link</button>
             </div>
         </div>
     )

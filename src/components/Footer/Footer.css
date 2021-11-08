@@ -8,7 +8,7 @@
     color: white;
     height: 116px;
     overflow-y: hidden;
-    
+    margin-top: 32px;
 }
 
 #myFooter .footer-copyright {
@@ -111,7 +111,6 @@
 
 .middle{
     text-align: center;
-    margin-top: 70px;
 }
 .middle2{
     text-align: center;
@@ -129,7 +128,7 @@
     margin-bottom: 20px;
     display: inline-block;
     width: 30%;
-    margin-top: 70px;
+    margin-top: 10px;
     font-size: 80px;
     color: white;
     text-align: center;
@@ -173,12 +172,12 @@ body{
 
 .h55{
     font-weight: 400;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 @media screen and (max-width: 769px) {
     #myFooter{
-        height: 500px;
+        height: 330px;
         position: relative;
         width: 100%;
         overflow-y:unset;
@@ -201,13 +200,13 @@ body{
     #logo{
         width: 100%;
         font-size: 80px;
-        margin-top: 110px;
+        margin-top: 30px;
     }
     .beside{
         width: 100%;
         overflow-y: hidden;
-        margin-top: 40px;
-        height: 120px;
+        margin-top: 0px;
+        height: 80px;
         
     }
     
@@ -228,13 +227,18 @@ body{
 
 @media only screen and (max-device-width: 769px) {
     #myFooter{
-        height: 600px;
+        height: 500px;
         position: relative;
         bottom: 0px;
         width: 100%;
         overflow-y:unset;
-        top:300px
+        top:490px
     }
+    
+    #myFooter .social-networks a {
+        font-size: 60px;
+    }
+    
     .middle1{
         width: 100%;
         font-size: 35px;
@@ -251,14 +255,13 @@ body{
     }
     #logo{
         width: 100%;
-        font-size: 120px;
-        margin-top: 110px;
-        
+        font-size: 160px;
+        margin-top: 0px;
     }
     .beside{
         width: 100%;
         overflow-y: hidden;
-        margin-top: 60px;
+        margin-top: 0px;
         height: 150px;
     }
     
@@ -268,7 +271,7 @@ body{
         font-weight: 400;
     }
     .h55{
-        margin-top: 80px;
+        margin-top: 10px;
         font-size: 25px;
         font-weight: 400;
     }

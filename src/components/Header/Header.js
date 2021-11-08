@@ -42,7 +42,7 @@ const Header = (props) => {
     useEffect(()=>{
         setLogin(props.isLogin)
     },[props])
-    
+
     return (
         <header>
             <h2 id="pas"><a href="/" id="pasLink">Pas</a></h2> 

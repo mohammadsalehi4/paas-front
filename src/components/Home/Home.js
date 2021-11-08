@@ -56,12 +56,11 @@ const Home = () => {
                 <a href="/RecoveryAcc" id="recovery">Recovery Account</a>
             </div>
             <div id="description11">
-                <div className="descP"><h1 className="about descP">About</h1></div>
-                <div className="descP">This program gives dynamic password capability to different sites.</div>
-                <div className="descP">This is initial version that does not have all the features of the final version.</div>
-                <div className="descP descP1">In addition to the password, you will need the code that the application generates on your account.</div>
-                <div className="descP">You can download the project guide to learn about the features of the original version of the program.</div>
-                
+                <p className="descP"><h1 className="about">About</h1>
+                This program gives dynamic password capability to different sites.<br/>
+                In addition to the password, you will need the code that the application generates on your account.<br/>
+                This is initial version that does not have all the features of the final version.</p>
+ 
             </div>
         </div>
     )

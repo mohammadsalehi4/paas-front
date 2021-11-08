@@ -3,10 +3,8 @@
     src: url('./Nunito.ttf');
 }
 
-
-
 #inputBox{
-    width: 390px;
+    width: 370px;
     background: white;
     padding: 30px;
     border-radius: 13px;
@@ -15,12 +13,12 @@
     box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.04);
     display: inline-block;
     position: relative;
-    height: 270px;
+    height: 220px;
 }
 
 #inputBox1{
-    height: 190px;
-    width: 390px;
+    height: 160px;
+    width: 370px;
     background: white;
     padding: 30px;
     border-radius: 13px;
@@ -32,7 +30,7 @@
 }
 
 #inputBox2{
-    width: 390px;
+    width: 370px;
     background: white;
     padding: 30px;
     border-radius: 13px;
@@ -41,11 +39,11 @@
     box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.04);
     display: inline-block;
     position: relative;
-    height: 310px;
+    height: 260px;
 }
 
 #inputBox3{
-    width: 390px;
+    width: 370px;
     background: white;
     padding: 30px;
     border-radius: 13px;
@@ -54,15 +52,29 @@
     box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.04);
     display: inline-block;
     position: relative;
-    height: 240px;
+    height: 210px;
 }
+
+#inputBox4{
+    width: 370px;
+    background: white;
+    padding: 30px;
+    border-radius: 13px;
+    margin: 80px 6%;
+    min-width: 330px;
+    box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.04);
+    display: inline-block;
+    position: relative;
+    height: 150px;
+}
+
 
 .dv1{
     width: 100%;
 }
 
 .inp1{
-    height: 38px;
+    height: 40px;
     width: 100%;
     color: #404040;
     background: white;
@@ -70,7 +82,8 @@
     border-color: #c4c4c4 #d1d1d1 #d4d4d4;
     border-radius: 5px;
     -moz-outline-radius: 3px;
-    margin-top: 25px;
+    margin-top: 15px;
+    box-sizing: border-box;
 }
 
 .inp2{
@@ -78,24 +91,25 @@
     width: 100%;
     height: 38px;
     color: white;
-    margin-top: 25px;
+    margin-top: 15px;
     border-style: none;
     border-radius: 7px;
 }
 
 #getCode1{
-    background: #0076bb;
+    background: #003757;
+    width: 100%;
 
 }
 #getCode1:hover{
-    background-color: #003757;
-
+    background-color: #00273d;
 }
 
 #titleBox{
 
     font-family: nunito;
     font-weight: bold;
+    font-size: 25px;
 }
 
 .inp2:hover{
@@ -105,13 +119,11 @@
 
 #description11{
     display: inline-block;
-    margin-top: 80px;
     font-family: nunito;
-    width: 55%;
+    width: 40%;
     left: 540px;
     padding: 30px;
     height: 250px;
-    
 }
 
 .descP{
@@ -134,7 +146,7 @@
 #recovery{
     text-decoration: none;
     position: relative;
-    top: 25px;
+    top: 15px;
     color: #003757;
 }
 
@@ -157,41 +169,31 @@
     font-weight: bolder;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    #inputBox{
-        display: block;
-        width: 70%;
-        margin-left: 15%;
-        border-radius: 8px;
-        margin-top: 100px;
-    }
-    
-    #description11{
-        display: block;
-        margin-top: 60px;
-        font-family: nunito;
-        width: 94%;
-        margin-left: 5%;
-        padding: 30px;
-        height: 250px;
-        font-size: 14px;
-    }
-}
 
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+@media screen and (min-width: 769px) and (max-width: 1044px) {
     #inputBox{
-
+        width: 30%;
     }
-    
+    #inputBox1{
+        width: 30%;
+    }
+    #inputBox2{
+        width: 30%;
+    }
+    #inputBox3{
+        width: 30%;
+    }
+    #inputBox4{
+        width: 30%;
+    }
     #description11{
-        display: block;
+        display: inline-block;
         margin-top: -10px;
         font-family: nunito;
-        width: 75%;
+        width: 30%;
         padding: 20px;
         height: 250px;
         font-size: 15px;
-        margin-left: 6%;
     }
 }
 
@@ -199,7 +201,7 @@
     #inputBox{
         display: block;
         width: 80%;
-        margin-left: 10%;
+        margin-left: 5%;
         border-radius: 8px;
         margin-top: 50px;
         
@@ -207,7 +209,7 @@
     #inputBox1{
         display: block;
         width: 80%;
-        margin-left: 10%;
+        margin-left: 5%;
         border-radius: 8px;
         margin-top: 50px;
         
@@ -215,17 +217,31 @@
     #inputBox2{
         display: block;
         width: 80%;
-        margin-left: 10%;
+        margin-left: 5%;
         border-radius: 8px;
         margin-top: 50px;
         
     }
-    
+    #inputBox3{
+        display: block;
+        width: 80%;
+        margin-left: 5%;
+        border-radius: 8px;
+        margin-top: 50px; 
+    }
+    #inputBox4{
+        display: block;
+        width: 80%;
+        margin-left: 5%;
+        border-radius: 8px;
+        margin-top: 50px; 
+    }
     #description11{
         display: block;
         position: relative;
-        left: 10%;
+        left: 5%;
         width: 80%;
+        margin-top: -60px;
     }
 
     #notif{
@@ -238,72 +254,57 @@
         height: 0px;
     }
     
-    .descP{
-        display: none;
-    }
-    
-}
-
-@media only screen and (min-device-width: 1225px) and (max-device-width: 1400px) {
-    #description11{
-        width: 50%;
-    }
-}
-
-@media only screen and (min-device-width: 960px) and (max-device-width: 1224px) {
-    #description11{
-        width: 40%;
-    }
-}
-
-@media only screen and (min-device-width: 769px) and (max-device-width: 960px) {
-    #description11{
-        width: 30%;
-        left: 500px;
-        
-    }
-    
 }
 
 @media only screen and (max-device-width: 768px) {
     #inputBox{
         display: block;
-        width: 92%;
+        width: 86%;
         margin-left: 4%;
         border-radius: 8px;
         margin-top: 120px;
         box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.04);
-        height: 625px;
+        height: 515px;
     }
     
     #inputBox1{
         display: block;
-        width: 92%;
+        width: 86%;
         margin-left: 4%;
         border-radius: 8px;
         margin-top: 120px;
         box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.04);
-        height: 400px;
+        height: 340px;
     }
     
     #inputBox2{
         display: block;
-        width: 92%;
+        width: 86%;
         margin-left: 4%;
         border-radius: 8px;
         margin-top: 120px;
         box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.04);
-        height: 700px;
+        height: 570px;
     }
     
     #inputBox3{
         display: block;
-        width: 92%;
+        width: 86%;
         margin-left: 4%;
         border-radius: 8px;
         margin-top: 120px;
         box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.04);
-        height: 550px;
+        height: 450px;
+    }
+    
+    #inputBox4{
+        display: block;
+        width: 86%;
+        margin-left: 4%;
+        border-radius: 8px;
+        margin-top: 120px;
+        box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.04);
+        height: 350px;
     }
     
     .inp1{
@@ -311,9 +312,9 @@
         font-size: 40px;
         border-width: 3px;
         border-radius: 17px;
-        margin-top: 50px;
+        margin-top: 20px;
         position: relative;
-        top: 30px;
+        top: 20px;
     }
     
     .inp2{
@@ -324,14 +325,13 @@
         border-radius: 20px;
         margin-top: 50px;
         position: relative;
-        top:30px
+        top:20px
     }
     
     #titleBox{
         font-size: 40px;
         font-family: nunito;
         font-weight: bold;
-        margin-top: 30px;
     }
     
     #description11{
@@ -356,10 +356,7 @@
     }
     #recovery{
         font-size: 40px;
-        top: 95px;
-    }
-    .descP{
-        display: none;
+        top: 55px;
     }
 
 }
