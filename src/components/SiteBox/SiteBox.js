@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 import './SiteBox.css'
-import { Button } from 'react-bootstrap'
 import Address from '../../Address';
 const SiteBox = (props) => {
 
@@ -52,10 +51,10 @@ const SiteBox = (props) => {
             }
         })
     }
-
     useEffect(()=>{
         if((newTime-props.now)<=0){
             SetCode('No Code!')
+            SetNewTime(0)
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[(newTime-props.now)])
@@ -65,13 +64,13 @@ const SiteBox = (props) => {
             <div id="leftDiv">
                 <h3 id="Address">{props.Address}</h3>
                 <p id="username">{props.Username}</p>
-                <Button onClick={getCode} id="getCode">get Code</Button>
+                <button onClick={getCode} id="getCode">get Code</button>
             </div>
             <div id="rightDiv">
                 <h5 style={{margin:"20px"}} id="showCode" className={props.Address}>{code}</h5>
             </div>
-            <div className="progress  PRBox " id="highPR" style={{height:"10px"}}>
-                <div className="progress-bar" style={{width:`${(newTime-props.now)*1.7}%`}}></div>
+            <div className="outProgress">
+                <div className="inProgress" style={{width:`${(newTime-props.now)*1.7}%`}}></div>
             </div>
         </div>
     )

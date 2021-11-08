@@ -1,7 +1,7 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
 import axios from 'axios'
 import Address from '../../Address'
+import './AddNewSite.css'
 
 const AddNewSite = () => {
 
@@ -51,7 +51,7 @@ const AddNewSite = () => {
 
     return (
         <div className="mainDiv">
-            <div id="inputBox">
+            <div id="inputBox5">
                 <h5 id="titleBox">new Site</h5>
                 <input placeholder="Site Address..." type="text" className="inp1" id="AddressBox"/>
                 <input placeholder="Username..." type="text" className="inp1" id="UsernameBox"/>

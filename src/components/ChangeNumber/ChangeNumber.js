@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
+import './ChangeNumber.css'
 import axios from 'axios'
 import Address from '../../Address'
 
@@ -59,7 +59,7 @@ const ChangeNumber = () => {
     }
     return (
         <div className="mainDiv">
-            <div id="inputBox">
+            <div id="inputBox7">
                 <h5  id="titleBox">new Number</h5>
                 <input placeholder="Number..." type="text" className="inp1" id="NumberBox"/>
                 <button className="inp2" id="getCode1" onClick={Add}>change Number</button>

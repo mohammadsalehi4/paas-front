@@ -24,6 +24,7 @@
     border-radius: 20px;
     color: white;
     position: relative;
+    font-size: 20px;
 }
 
 .frst{
@@ -45,5 +46,15 @@
         width: 60%;
         margin-left: 20%;
         margin-top: 50px;
+    }
+}
+
+@media only screen and (max-device-width:768px) {
+    .sitehomebtn{
+        width: 60%;
+        padding: 36px 16px;
+        margin-left: 20%;
+        margin-top: 50px;
+        font-size: 40px;
     }
 }

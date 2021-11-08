@@ -1,8 +1,7 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
 import axios from 'axios'
 import Address from '../../Address'
-
+import './AddEmai.css'
 const AddEmail = () => {
 
     function getCookie(cname) {
@@ -40,7 +39,7 @@ const AddEmail = () => {
     }
     return (
         <div className="mainDiv">
-            <div id="inputBox">
+            <div id="inputBox6">
                 <h5  id="titleBox">Add Email</h5>
                 <input placeholder="Email..." type="text" className="inp1" id="EmailBox"/>
                 <button className="inp2" id="getCode1" onClick={Add}>send verify Link</button>
