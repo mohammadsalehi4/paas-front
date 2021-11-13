@@ -9,19 +9,18 @@ const UserSignUp = () => {
     const [showPassWord,SetShowPassWord]=useState('Password...')
     
     const signUp=()=>{
-        console.log('start')
         const username=document.getElementById('signupUsernameInput').value
-        const password=document.getElementById('signupPasswordInput').value
+        const password=PassWord
         console.log(username+'||'+password)
         console.log(Address+'signup')
-        axios.post(Address+'signup',{
+        axios.post(Address+'/signup',{
             'Number':String(username),
             'password':password
         })
         .then(response=>{
             if(response.data.success===true){
                 document.getElementById('signupUsernameInput').value=''
-                document.getElementById('signupPasswordInput').value=''
+                SetPassWord('')
                 document.getElementById('notif').style.display="block"
                 document.getElementById('notif').innerHTML="Done!"
                 document.getElementById('notif').style.opacity="0.6"
@@ -31,7 +30,6 @@ const UserSignUp = () => {
             }else{
                 if(response.data.msg==='Wrong Phone Number format'){
                     document.getElementById('signupUsernameInput').value=''
-                    document.getElementById('signupPasswordInput').value=''
                     document.getElementById('notif').style.display="block"
                     document.getElementById('notif').innerHTML="wrong number"
                     document.getElementById('notif').style.opacity="0.6"
@@ -41,7 +39,6 @@ const UserSignUp = () => {
                 }
                 if(response.data.msg==='Unsuccessful'){
                     document.getElementById('signupUsernameInput').value=''
-                    document.getElementById('signupPasswordInput').value=''
                     document.getElementById('notif').style.display="block"
                     document.getElementById('notif').innerHTML="signup failed"
                     document.getElementById('notif').style.opacity="0.6"
@@ -51,7 +48,6 @@ const UserSignUp = () => {
                 }
                 if(response.data.msg==='this Number is already exist'){
                     document.getElementById('signupUsernameInput').value=''
-                    document.getElementById('signupPasswordInput').value=''
                     document.getElementById('notif').style.display="block"
                     document.getElementById('notif').innerHTML="Number exist"
                     document.getElementById('notif').style.opacity="0.6"
@@ -96,25 +92,23 @@ const UserSignUp = () => {
             <div id="notif"></div>
             <div id="newInputBox">
                     <h5 id="titleBox">user signup</h5>
-                    <form>
                     <input placeholder="Phone Number..." type="text" className="inp1" id="signupUsernameInput"/>
                     <input placeholder={showPassWord} disabled type="text" className="inp1" id="getNumber"/>
-                <div id="keyboard">
-                    <button className="inputButton" onClick={()=>{addNumber(1)}}>1</button>
-                    <button className="inputButton" onClick={()=>{addNumber(2)}}>2</button>
-                    <button className="inputButton" onClick={()=>{addNumber(3)}}>3</button>
-                    <button className="inputButton" onClick={()=>{addNumber(4)}}>4</button>
-                    <button className="inputButton" onClick={()=>{addNumber(5)}}>5</button>
-                    <button className="inputButton" onClick={()=>{addNumber(6)}}>6</button>
-                    <button className="inputButton" onClick={()=>{addNumber(7)}}>7</button>
-                    <button className="inputButton" onClick={()=>{addNumber(8)}}>8</button>
-                    <button className="inputButton" onClick={()=>{addNumber(9)}}>9</button>
-                    <button className="inputButton" onClick={()=>{addNumber(0)}}>0</button>
-                    <button className="inputButton" onClick={minus}><i class="fa fa-backward" aria-hidden="true"></i></button>
-                    <button className="inputButton" onClick={Allminus}><i class="fa fa-fast-backward" aria-hidden="true"></i></button>
-                </div>
+                    <div id="keyboard">
+                        <button className="inputButton" onClick={()=>{addNumber(1)}}>1</button>
+                        <button className="inputButton" onClick={()=>{addNumber(2)}}>2</button>
+                        <button className="inputButton" onClick={()=>{addNumber(3)}}>3</button>
+                        <button className="inputButton" onClick={()=>{addNumber(4)}}>4</button>
+                        <button className="inputButton" onClick={()=>{addNumber(5)}}>5</button>
+                        <button className="inputButton" onClick={()=>{addNumber(6)}}>6</button>
+                        <button className="inputButton" onClick={()=>{addNumber(7)}}>7</button>
+                        <button className="inputButton" onClick={()=>{addNumber(8)}}>8</button>
+                        <button className="inputButton" onClick={()=>{addNumber(9)}}>9</button>
+                        <button className="inputButton" onClick={()=>{addNumber(0)}}>0</button>
+                        <button className="inputButton" onClick={minus}><i class="fa fa-backward" aria-hidden="true"></i></button>
+                        <button className="inputButton" onClick={Allminus}><i class="fa fa-fast-backward" aria-hidden="true"></i></button>
+                    </div>
                 <button className="inp2" id="getCode1" onClick={signUp}>SignUp</button>
-                    </form>
             </div>
         </div>
     )

@@ -31,18 +31,17 @@ const Home = () => {
         })
         .then(response=>{
             if(response.data.success===true){
-                document.getElementById('getPassword').value=''
                 document.getElementById('getNumber').value=''
                 setCookie('token','Bearer '+response.data.token,1)
                 setCookie('mode','user',1)
                 window.location.reload()
             }
             else{
-                document.getElementById('getPassword').value=''
                 document.getElementById('getNumber').value=''
                 document.getElementById('notif').style.display="block"
                 document.getElementById('notif').innerHTML="Login failed"
                 document.getElementById('notif').style.opacity="0.6"
+                SetPassWord('')
                 setTimeout(()=>{
                     document.getElementById('notif').style.display="none"
                 },4000)
@@ -75,7 +74,7 @@ const Home = () => {
             <div id="newInputBox">
                 <h5 id="titleBox">login</h5>
                 <input placeholder="Phone Number..." type="text" className="inp1" id="getNumber"/>
-                <input placeholder={showPassWord} disabled type="text" className="inp1" id="getNumber"/>
+                <input placeholder={showPassWord} disabled type="text" className="inp1"/>
                 <div id="keyboard">
                     <button className="inputButton" onClick={()=>{addNumber(1)}}>1</button>
                     <button className="inputButton" onClick={()=>{addNumber(2)}}>2</button>
