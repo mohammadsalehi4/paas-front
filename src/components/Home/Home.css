@@ -3,6 +3,48 @@
     src: url('./Nunito.ttf');
 }
 
+#newInputBox{
+    width: 370px;
+    background: white;
+    padding: 30px;
+    border-radius: 13px;
+    margin: 80px 6%;
+    min-width: 330px;
+    box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.06);
+    display: inline-block;
+    position: relative;
+    height: 420px;
+}
+
+#keyboard{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.inputButton{
+    width: 30%;
+    height: 40px;
+    margin-left: 2.5%;
+    margin-top: 5px;
+    border-style: none;
+    background: #003757;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.inputButton:hover{
+    background: #00273d;
+    cursor: pointer;
+}
+
+#showPassword{
+    color: rgb(141, 141, 141);
+    font-size: 13px;
+    margin-top: 12px;
+    margin-left: 3px;
+}
+
 #inputBox{
     width: 370px;
     background: white;
@@ -121,9 +163,10 @@
     display: inline-block;
     font-family: nunito;
     width: 40%;
-    left: 540px;
     padding: 30px;
-    height: 250px;
+    height: 150px;
+    position: absolute;
+    top: 200px;
 }
 
 .descP{
@@ -198,6 +241,20 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    #newInputBox{
+        width: 80%;
+        background: white;
+        padding: 30px;
+        border-radius: 13px;
+        margin: 0px 3.8%;
+        min-width: 330px;
+        box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.06);
+        display: inline-block;
+        position: relative;
+        height: 420px;
+    }
+
     #inputBox{
         display: block;
         width: 80%;
@@ -241,7 +298,8 @@
         position: relative;
         left: 5%;
         width: 80%;
-        margin-top: -60px;
+        z-index: 3;
+        top: 0px;
     }
 
     #notif{
@@ -342,6 +400,7 @@
         font-size: 31px;
         height: 480px;
         height: 0px;
+        top: 0px;
     }
 
     #notif{
@@ -358,5 +417,32 @@
         font-size: 40px;
         top: 55px;
     }
-
+    
+    #newInputBox{
+        width: 88%;
+        background: white;
+        padding: 30px;
+        border-radius: 13px;
+        margin: 80px 6%;
+        box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.06);
+        display: inline-block;
+        position: relative;
+        height: 1060px;
+        box-sizing: border-box;
+    }
+    
+    #keyboard{
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .inputButton{
+        width: 30%;
+        height: 100px;
+        margin-left: 2.5%;
+        margin-top: 20px;
+        border-style: none;
+        border-radius: 5px;
+        font-size: 40px;
+    }
 }

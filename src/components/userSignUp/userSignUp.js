@@ -1,14 +1,21 @@
 import React from 'react'
 import './userSignUp.css'
-import { Button} from 'react-bootstrap'
 import axios from 'axios'
 import Address from '../../Address'
+import { useState,useEffect } from 'react'
 const UserSignUp = () => {
+
+    const [PassWord,SetPassWord]=useState('')
+    const [showPassWord,SetShowPassWord]=useState('Password...')
+    
     const signUp=()=>{
+        console.log('start')
         const username=document.getElementById('signupUsernameInput').value
         const password=document.getElementById('signupPasswordInput').value
-        axios.post(Address+'/signup',{
-            'Number':username,
+        console.log(username+'||'+password)
+        console.log(Address+'signup')
+        axios.post(Address+'signup',{
+            'Number':String(username),
             'password':password
         })
         .then(response=>{
@@ -54,17 +61,59 @@ const UserSignUp = () => {
                 }
             }
         })
+        .catch(err=>{
+            console.log(err)
+        })
     }
+    
+    const addNumber=(Num)=>{
+        let numb=String(PassWord)
+        numb=numb+Num
+        SetPassWord(numb)
+    }
+    
+    const minus=()=>{
+        let numb=String(PassWord)
+        numb=numb.substring(0,numb.length-1)
+        SetPassWord(numb)
+    }
+    
+    const Allminus=()=>{
+        SetPassWord('')
+    }
+    
+    useEffect(()=>{
+        console.log(PassWord)
+        if(PassWord!==''){
+            SetShowPassWord(PassWord)
+        }else{
+            SetShowPassWord('Password...')
+        }
+    },[PassWord])
     
     return (
         <div  className="mainDiv">
             <div id="notif"></div>
-            <div id="inputBox3">
+            <div id="newInputBox">
                     <h5 id="titleBox">user signup</h5>
                     <form>
                     <input placeholder="Phone Number..." type="text" className="inp1" id="signupUsernameInput"/>
-                    <input placeholder="Password..." type="password" className="inp1" id="signupPasswordInput"/>
-                    <button className="inp2" id="getCode1" onClick={signUp}>signUp</button>
+                    <input placeholder={showPassWord} disabled type="text" className="inp1" id="getNumber"/>
+                <div id="keyboard">
+                    <button className="inputButton" onClick={()=>{addNumber(1)}}>1</button>
+                    <button className="inputButton" onClick={()=>{addNumber(2)}}>2</button>
+                    <button className="inputButton" onClick={()=>{addNumber(3)}}>3</button>
+                    <button className="inputButton" onClick={()=>{addNumber(4)}}>4</button>
+                    <button className="inputButton" onClick={()=>{addNumber(5)}}>5</button>
+                    <button className="inputButton" onClick={()=>{addNumber(6)}}>6</button>
+                    <button className="inputButton" onClick={()=>{addNumber(7)}}>7</button>
+                    <button className="inputButton" onClick={()=>{addNumber(8)}}>8</button>
+                    <button className="inputButton" onClick={()=>{addNumber(9)}}>9</button>
+                    <button className="inputButton" onClick={()=>{addNumber(0)}}>0</button>
+                    <button className="inputButton" onClick={minus}><i class="fa fa-backward" aria-hidden="true"></i></button>
+                    <button className="inputButton" onClick={Allminus}><i class="fa fa-fast-backward" aria-hidden="true"></i></button>
+                </div>
+                <button className="inp2" id="getCode1" onClick={signUp}>SignUp</button>
                     </form>
             </div>
         </div>
