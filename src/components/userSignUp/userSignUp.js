@@ -4,7 +4,7 @@ import axios from 'axios'
 import Address from '../../Address'
 import { useState,useEffect } from 'react'
 const UserSignUp = () => {
-
+    
     const [PassWord,SetPassWord]=useState('')
     const [showPassWord,SetShowPassWord]=useState('Password...')
     

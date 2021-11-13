@@ -96,6 +96,7 @@ const Home = () => {
                 <p className="descP"><h1 className="about">About</h1>
                 This program gives dynamic password capability to different sites.<br/>
                 In addition to the password, you will need the code that the application generates on your account.<br/>
+                When entering a password, you should use the site keyboard for extra security<br/>
                 This is initial version that does not have all the features of the final version.</p>
             </div>
         </div>
