@@ -39,18 +39,18 @@
 }
 
 .outProgress{
-    height: 15px;
+    height: 12px;
     width: 100%;
-    background: #aebbca;
+    background: #8d9eb1;
     margin: 10px 0px;
-    border-radius: 5px;
+    border-radius: 3.5px;
     overflow: hidden;
 }
 
 .inProgress{
-    height: 15px;
+    height: 12px;
     background: #003757;
-    transition: 0.5s;
+    transition: 0.8s;
 }
 
 #rightDiv{

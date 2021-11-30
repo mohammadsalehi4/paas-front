@@ -22,11 +22,9 @@ const Dashboard = () => {
     }
 
     const onetime=new Date()
-    
     const [AddedSites,setAddedSites]=useState([])
-    const [IsSites,setIsSites]=useState(false)
     const [now,setNow]=useState(Math.floor(onetime.getTime()/1000))   
-    
+    const [faza,SetFaza]=useState(0)
     useEffect(()=>{
         const token=getCookie('token')
         axios.post(Address+'/userinfo',{
@@ -39,12 +37,16 @@ const Dashboard = () => {
            
             if(response.data.success===true){
                 setAddedSites([])
+                if(response.data.sites.length===0){
+                    window.location.assign("/addNewSite")
+                }
                 for(let i=0;i< response.data.sites.length;i++){
-                    setIsSites(true)
+                    SetFaza(i+1)
                     setAddedSites(AddedSites=>[...AddedSites,
                         {
                             Address:response.data.sites[i].SiteAddress,
-                            Username:response.data.sites[i].username
+                            Username:response.data.sites[i].username,
+                            boxNumber:(i)
                         }
                     ])
                 }
@@ -61,22 +63,20 @@ const Dashboard = () => {
         countrt()
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
-    
+
     return (
         <div id="DashHome">
-            {IsSites===false ? <div id="faza"></div> : null}
             {
                 AddedSites.map((item,index)=>{
                     return(
-                        <div >
-                            <SiteBox Address={item.Address} Username={item.Username} key={item.Address} now={now} index={index}/>
+                        <div id="dashBOX">
+                            <SiteBox boxID={item.boxNumber} Address={item.Address} Username={item.Username} key={item.Address} now={now} index={index}/>
                             <div id="notif">copied to ClipBoard</div>
-                            
                         </div>
                     )
                 })
-                
             }
+            {faza===1 ? <div id="faza"></div> : null}
         </div>
     )
 }
