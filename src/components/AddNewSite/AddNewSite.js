@@ -58,6 +58,14 @@ const AddNewSite = () => {
                 <input placeholder="Code..." type="text" className="inp1" id="CodeBox"/>
                 <button className="inp2" id="getCode1" onClick={Add} >Add Site</button>
             </div>
+            <div id="description11" className="Dplus">
+                <h1 className="about">About</h1><br/>
+                <p>In this page, you can add sites that use the pass service to your account.<br/><br/>
+                You must enter site address and your username on that site. <br/><br/>
+                You must also enter a 7-character code that will be given to you on the same site.<br/><br/>
+                In the final version of the program, you can scan the QRcode to perform these steps faster.
+                </p>
+            </div>
         </div>
     )
 }

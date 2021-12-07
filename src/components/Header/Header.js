@@ -77,11 +77,6 @@ const Header = (props) => {
                         change Number
                     </a>
                 : null}
-                {mode==='user' ? 
-                    <a href="/DeleteAcc" className="navLink">
-                        Delete Account
-                    </a>
-                : null}
                 <a href="/" onClick={siteExit} className="navLink firstLink logout">
                     logOut
                 </a>

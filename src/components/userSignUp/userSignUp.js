@@ -110,6 +110,15 @@ const UserSignUp = () => {
                     </div>
                 <button className="inp2" id="getCode1" onClick={signUp}>SignUp</button>
             </div>
+            <div id="description11" className="Dplus">
+                <h1 className="about">About</h1>
+                <p>Users can register on this page.<br/><br/>
+                After entering the mobile number, the password must be entered by the site's dedicated keyboard in the relevant box.<br/><br/>
+                The reason for using a dedicated keyboard is more security.<br/><br/>
+                In the final version of the program, after registration, a text message containing the activation link will be sent to the mobile number, which must be clicked to activate.<br/><br/>
+                In the current version, the account is active by default after registration.
+                </p>
+            </div>
         </div>
     )
 }

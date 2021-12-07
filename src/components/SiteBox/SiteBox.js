@@ -58,7 +58,7 @@ const SiteBox = (props) => {
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[(newTime-props.now)])
-    
+
     if(props.boxID===0){
         return (
             <div className="siteBox siteBox1">

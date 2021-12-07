@@ -8,7 +8,6 @@ import SiteSignUp from './components/siteSignUp/SiteSignUp'
 import Recovery from './components/Recovery/Recovery'
 import DeleteAcc from './components/DeleteAcc/DeleteAcc'
 import Header from './components/Header/Header'
-import SiteHome from './components/SiteHome/SiteHome'
 import Dashboard from './components/Dashboard/Dashboard'
 import AddEmail from './components/AddEmail/AddEmail'
 import AddNewSite from './components/AddNewSite/AddNewSite'
@@ -76,9 +75,7 @@ const App = () => {
             <Header isLogin={login} mode={mode}/>
                 <main className="py-3">
                     {!login ? <Route path="/" component={Home} exact/> 
-                    : ( mode==='site' ? 
-                        <Route path="/" component={SiteHome} exact/>
-                    : mode==='user' ? 
+                    : ( mode==='user' ? 
                         ( <Route path="/" component={Dashboard} exact/>) 
                     : <Route path="/" component={Home} exact/>)}
                     <Route path="/userSignUp" component={UserSignUp}/>

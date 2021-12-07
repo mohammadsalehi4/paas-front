@@ -94,6 +94,12 @@ const SiteSignUp = () => {
                     <input placeholder="Password..." type="password" className=" inp1" id="signupSitePasswordInput"/>
                     <button className="inp2" id="getCode1" onClick={siteSignUp}>signUp</button>
             </div>
+            <div id="description11">
+                <p className="descP"><h1 className="about">About</h1>
+                On this page, different sites can register to use this service<br/><br/>
+                In the final version of the program, after registration, the activation link will be sent to the registered number via SMS.<br/><br/>
+                In the current version, the account is active by default after registration.</p>
+            </div>
         </div>
     )
 }

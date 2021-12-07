@@ -64,6 +64,13 @@ const ChangeNumber = () => {
                 <input placeholder="Number..." type="text" className="inp1" id="NumberBox"/>
                 <button className="inp2" id="getCode1" onClick={Add}>change Number</button>
             </div>
+            <div id="description11">
+                <p className="descP"><h1 className="about">About</h1>
+                On this page you can change the mobile number of your account<br/><br/>
+                You must enter your new number in this field<br/><br/>
+                In the final version, a text message containing the link to change the number to the previous mobile number will be sent<br/><br/>
+                In the current version of the program, the link is displayed by an alert that you just need to copy it in the browser</p>
+            </div>
         </div>
     )
 }
