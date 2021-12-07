@@ -76,9 +76,9 @@ const Home = () => {
                 <input placeholder="Phone Number..." type="text" className="inp1" id="getNumber"/>
                 <input placeholder={showPassWord} disabled type="text" className="inp1"/>
                 <div id="keyboard">
-                    <button className="inputButton" onClick={()=>{addNumber(1)}}>1</button>
-                    <button className="inputButton" onClick={()=>{addNumber(2)}}>2</button>
-                    <button className="inputButton" onClick={()=>{addNumber(3)}}>3</button>
+                    <button className="inputButton topbtn" onClick={()=>{addNumber(1)}}>1</button>
+                    <button className="inputButton topbtn" onClick={()=>{addNumber(2)}}>2</button>
+                    <button className="inputButton topbtn" onClick={()=>{addNumber(3)}}>3</button>
                     <button className="inputButton" onClick={()=>{addNumber(4)}}>4</button>
                     <button className="inputButton" onClick={()=>{addNumber(5)}}>5</button>
                     <button className="inputButton" onClick={()=>{addNumber(6)}}>6</button>
