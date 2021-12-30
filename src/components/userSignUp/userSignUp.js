@@ -90,11 +90,13 @@ const UserSignUp = () => {
     return (
         <div  className="mainDiv">
             <div id="notif"></div>
-            <div id="newInputBox">
+            <div id="newInputBoxU">
                     <h5 id="titleBox">user signup</h5>
                     <input placeholder="Phone Number..." type="text" className="inp1" id="signupUsernameInput"/>
                     <input placeholder={showPassWord} disabled type="text" className="inp1" id="getNumber"/>
-                    <div id="keyboard">
+
+                <button className="inp2" id="getCode1" onClick={signUp}>SignUp</button>
+                <div id="keyboard">
                         <button className="inputButton" onClick={()=>{addNumber(1)}}>1</button>
                         <button className="inputButton" onClick={()=>{addNumber(2)}}>2</button>
                         <button className="inputButton" onClick={()=>{addNumber(3)}}>3</button>
@@ -108,7 +110,6 @@ const UserSignUp = () => {
                         <button className="inputButton" onClick={minus}><i class="fa fa-backward" aria-hidden="true"></i></button>
                         <button className="inputButton" onClick={Allminus}><i class="fa fa-fast-backward" aria-hidden="true"></i></button>
                     </div>
-                <button className="inp2" id="getCode1" onClick={signUp}>SignUp</button>
             </div>
             <div id="description11" className="Dplus">
                 <h1 className="about">About</h1>

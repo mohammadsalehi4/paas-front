@@ -16,7 +16,6 @@ header{
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.08);
     z-index: 1;
     background: white;
-    opacity: 0.85;
     background-color: #003757;
     color: white;
 }
@@ -24,6 +23,7 @@ header{
 #pasLink{
     text-decoration: none;
     color: rgb(255, 255, 255);
+    opacity: 1;
     font-family: lustra;
     font-size: 40px;
 }
@@ -32,6 +32,7 @@ header{
     position: absolute;
     margin: 12px 80px;
     display: inline-block;
+    
 }
 
 .navLink{
@@ -44,6 +45,7 @@ header{
     font-family: nunito;
     font-size: 17px;
     margin-right: 10px;
+    text-align: center;
 }
 
 .navLink:hover{
@@ -54,6 +56,8 @@ header{
 
 #menuBox{
     direction: rtl;
+    
+    
 }
 
 @media screen and (max-width:768px){

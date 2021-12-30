@@ -1,11 +1,13 @@
 #inputBox6{
     width: 370px;
-    background: white;
     padding: 30px;
     border-radius: 13px;
     margin: 80px 6%;
     min-width: 330px;
-    box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.04);
+    background: url('./../Home/bg9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
     display: inline-block;
     position: relative;
     height: 140px;

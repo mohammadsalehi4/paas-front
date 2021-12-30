@@ -56,6 +56,7 @@ const Header = (props) => {
                     <a className="navLink" href="/userSignUp">user signup</a>
                     <a className="navLink" href="/SiteSignUp">site signup</a>
                     <a className="navLink" href="/DeleteAcc">Delete Acc</a>
+                    <a className="navLink" href="/">Home</a>
                 </div>
             </div>
             :  

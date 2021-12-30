@@ -75,6 +75,9 @@ const Home = () => {
                 <h5 id="titleBox">login</h5>
                 <input placeholder="Phone Number..." type="text" className="inp1" id="getNumber"/>
                 <input placeholder={showPassWord} disabled type="text" className="inp1"/>
+
+                <button className="inp2" id="getCode1" onClick={UserLogin}>Login</button>
+                <a href="/RecoveryAcc" id="recovery">Recovery Account</a> 
                 <div id="keyboard">
                     <button className="inputButton topbtn" onClick={()=>{addNumber(1)}}>1</button>
                     <button className="inputButton topbtn" onClick={()=>{addNumber(2)}}>2</button>
@@ -88,9 +91,7 @@ const Home = () => {
                     <button className="inputButton" onClick={()=>{addNumber(0)}}>0</button>
                     <button className="inputButton" onClick={minus}><i class="fa fa-backward" aria-hidden="true"></i></button>
                     <button className="inputButton" onClick={Allminus}><i class="fa fa-fast-backward" aria-hidden="true"></i></button>
-                </div>
-                <button className="inp2" id="getCode1" onClick={UserLogin}>Login</button>
-                <a href="/RecoveryAcc" id="recovery">Recovery Account</a>      
+                </div>     
             </div>
             <div id="description11">
                 <p className="descP"><h1 className="about">About</h1>

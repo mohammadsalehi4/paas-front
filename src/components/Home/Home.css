@@ -5,21 +5,50 @@
 
 #newInputBox{
     width: 370px;
-    background: white;
+    background: url('./bg9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 30px;
     border-radius: 13px;
-    margin: 80px 6%;
+    margin: 100px 6%;
     min-width: 330px;
-    box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
     display: inline-block;
     position: relative;
-    height: 420px;
+    height: 225px;
+}
+
+#newInputBoxU{
+    width: 370px;
+    background: url('./bg9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    border-radius: 13px;
+    margin: 100px 6%;
+    min-width: 330px;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    position: relative;
+    height: 205px;
 }
 
 #keyboard{
     width: 100%;
-    margin-top: 20px;
+    margin-top: 38px;
+    display: none;
 }
+
+#newInputBox:hover #keyboard{
+    display: block;
+    
+}
+
+#newInputBoxU:hover #keyboard{
+    display: block;
+}
+
+
 
 .inputButton{
     width: 33%;
@@ -47,12 +76,14 @@
 
 #inputBox{
     width: 370px;
-    background: white;
+    background: url('./bg9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 30px;
     border-radius: 13px;
-    margin: 80px 6%;
+    margin: 100px 6%;
     min-width: 330px;
-    box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
     display: inline-block;
     position: relative;
     height: 220px;
@@ -61,24 +92,28 @@
 #inputBox1{
     height: 160px;
     width: 370px;
-    background: white;
+    background: url('./bg9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 30px;
     border-radius: 13px;
-    margin: 80px 6%;
+    margin: 100px 6%;
     min-width: 330px;
-    box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
     display: inline-block;
     position: relative;
 }
 
 #inputBox2{
     width: 370px;
-    background: white;
+    background: url('./bg9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 30px;
     border-radius: 13px;
-    margin: 80px 6%;
+    margin: 100px 6%;
     min-width: 330px;
-    box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
     display: inline-block;
     position: relative;
     height: 260px;
@@ -86,12 +121,14 @@
 
 #inputBox3{
     width: 370px;
-    background: white;
+    background: url('./bg9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 30px;
     border-radius: 13px;
-    margin: 80px 6%;
+    margin: 100px 6%;
     min-width: 330px;
-    box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
     display: inline-block;
     position: relative;
     height: 210px;
@@ -99,12 +136,14 @@
 
 #inputBox4{
     width: 370px;
-    background: white;
+    background: url('./bg9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 30px;
     border-radius: 13px;
-    margin: 80px 6%;
+    margin: 100px 6%;
     min-width: 330px;
-    box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
     display: inline-block;
     position: relative;
     height: 150px;
@@ -122,6 +161,7 @@
     background: white;
     border: 1px solid;
     border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+
     border-radius: 5px;
     -moz-outline-radius: 3px;
     margin-top: 15px;
@@ -250,15 +290,32 @@
 
     #newInputBox{
         width: 80%;
-        background: white;
+        background: url('./bg9.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
         padding: 30px;
         border-radius: 13px;
         margin: 0px 3.8%;
         min-width: 330px;
-        box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
         display: inline-block;
         position: relative;
-        height: 420px;
+        height: 225px;
+    }
+
+    #newInputBoxU{
+        width: 80%;
+        background: url('./bg9.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 30px;
+        border-radius: 13px;
+        margin: 0px 3.8%;
+        min-width: 330px;
+        box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
+        display: inline-block;
+        position: relative;
+        height: 195px;
     }
 
     #inputBox{
@@ -325,6 +382,11 @@
 }
 
 @media only screen and (max-device-width: 768px) {
+
+    #keyboard{
+        display: none;
+    }
+    
     #inputBox{
         display: block;
         width: 86%;
@@ -333,6 +395,10 @@
         margin-top: 120px;
         box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.04);
         height: 515px;
+        background: url('./bg9.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
     }
     
     #inputBox1{
@@ -343,6 +409,10 @@
         margin-top: 120px;
         box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.04);
         height: 340px;
+        background: url('./bg9.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
     }
     
     #inputBox2{
@@ -353,6 +423,10 @@
         margin-top: 120px;
         box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.04);
         height: 570px;
+        background: url('./bg9.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
     }
     
     #inputBox3{
@@ -363,6 +437,10 @@
         margin-top: 120px;
         box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.04);
         height: 450px;
+        background: url('./bg9.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
     }
     
     #inputBox4{
@@ -373,6 +451,10 @@
         margin-top: 120px;
         box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.04);
         height: 350px;
+        background: url('./bg9.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
     }
     
     .inp1{
@@ -429,20 +511,46 @@
     
     #newInputBox{
         width: 88%;
-        background: white;
+        background: url('./bg9.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
         padding: 30px;
         border-radius: 13px;
         margin: 80px 6%;
-        box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.06);
+
         display: inline-block;
         position: relative;
-        height: 1060px;
+        height: 560px;
+        box-sizing: border-box;
+    }
+
+    #newInputBox:hover #keyboard{
+        display: block;
+    }    
+    
+    #newInputBoxU:hover #keyboard{
+        display: block;
+    }
+
+    #newInputBoxU{
+        width: 88%;
+        background: url('./bg9.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 30px;
+        border-radius: 13px;
+        margin: 80px 6%;
+        box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
+        display: inline-block;
+        position: relative;
+        height: 500px;
         box-sizing: border-box;
     }
     
     #keyboard{
         width: 100%;
-        margin-top: 20px;
+        margin-top: 60px;
     }
     
     .inputButton{

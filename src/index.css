@@ -35,6 +35,13 @@ body {
     font-family: Arial;
     white-space: normal;
 }
+
+html{
+    background:rgb(223, 224, 226);
+}
+
+
+
 ol, ul {
     list-style: none;
 }
