@@ -94,11 +94,12 @@ const Home = () => {
                 </div>     
             </div>
             <div id="description11">
-                <p className="descP"><h1 className="about">About</h1>
+                <p className="descP"><h1 className="about">About</h1><br/>
                 This program gives dynamic password capability to different sites.<br/><br/>
-                In addition to the password, you will need the code that the application generates on your account.<br/><br/>
+                When logging in to sites that use this service, in addition to the password, you will also need a second dinamic password that is obtained from this service.<br/><br/>
                 When entering a password, you should use the site keyboard for extra security<br/><br/>
-                This is initial version that does not have all the features of the final version.</p>
+                This is initial version that does not have all the features of the final version.</p><br/>
+                <p>You can see the instructions and how the service works on <a href='/'>this page</a></p>
             </div>
         </div>
     )
