@@ -17,6 +17,7 @@ import siteRecovery from './components/siteRecovery/siteRecovery'
 import ChangePassword from './components/changePassword/changePassword'
 import DelByLink from './components/delByLink/delByLink'
 import SetNumber from './components/setNumber/SetNumber'
+import Description from './components/Description/Description'
 import Address from './Address'
 const App = () => {
 
@@ -86,6 +87,7 @@ const App = () => {
                     <Route path="/changeNumber" component={ChangeNumber}/>
                     <Route path="/addNewSite" component={AddNewSite}/>
                     <Route path="/siteLogin" component={SiteLogin}/>
+                    <Route path="/Description" component={Description}/>
                     <Route path="/siteRecovery" component={siteRecovery}/>
                     <Route path="/changePassword/:mode/:ID/:code" component={ChangePassword}/>
                     <Route path="/delByLink/:Email/:code" component={DelByLink}/>

@@ -1,7 +1,32 @@
-#DescriptionBox{
+@font-face {
+    font-family: 'nunito';
+    src: url('/src/components/Home/Nunito.ttf');
+}
+.Dtitle{
     width: 80%;
     margin-left: 10%;
-    margin-top: 70px;
+    margin-top: 90px;
+    position: relative;
+    font-size: 30px;
+    font-family: nunito;
+}
+
+.Dtext{
+    width: 74%;
+    margin-left: 13%;
+    margin-top: 20px;
+    position: relative;
+    font-family: nunito;
+    font-size: 18px;
+}
+
+.Dundertitle{
+    width: 76%;
+    margin-left: 12%;
+    margin-top: 30px;
+    position: relative;
+    font-size: 24px;
+    font-family: nunito;
 }
 
 @media only screen and (max-device-width:768px){

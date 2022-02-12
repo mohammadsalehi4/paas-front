@@ -99,7 +99,8 @@ const Home = () => {
                 When logging in to sites that use this service, in addition to the password, you will also need a second dinamic password that is obtained from this service.<br/><br/>
                 When entering a password, you should use the site keyboard for extra security<br/><br/>
                 This is initial version that does not have all the features of the final version.</p><br/>
-                <p>You can see the instructions and how the service works on <a href='/'>this page</a></p>
+                <p>You can see the instructions and how the service works on <a href='/Description'>this page</a></p>
+                
             </div>
         </div>
     )
