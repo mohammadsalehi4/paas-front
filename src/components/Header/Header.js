@@ -38,54 +38,54 @@ const Header = (props) => {
         window.location.assign("/")
     }
     
-    
     useEffect(()=>{
         setLogin(props.isLogin)
     },[props])
 
     return (
         <header>
-            <h2 id="pas"><a href="/" id="pasLink">Pas</a></h2> 
+            <h2 id="pas"><a href="/" id="pasLink">Pas</a><p id='psolp'>providing more security of login proccess</p></h2> 
             {isLogin===false ? 
             <div id="menuBox">
-                <div id="menu"></div>
+                <div id="menu" className='homeMenu'><i class="fa fa-navicon"></i></div>
                 
-                
+                <a href='/userSignUp' id='ju'>not register? join us!{'  '}<i class="fa fa-pencil"></i></a>
                 <div id="menuItems">
-                    <a className="navLink" href="/siteLogin">site login</a>
-                    <a className="navLink" href="/userSignUp">user signup</a>
-                    <a className="navLink" href="/SiteSignUp">site signup</a>
-                    <a className="navLink" href="/DeleteAcc">Delete Acc</a>
-                    <a className="navLink" href="/">Home</a>
+                    <a className="navLink" href="/">Home{' '}<i class="fa fa-home"></i></a>
+                    <a className="navLink" href="/siteLogin">site login{' '}<i class="fa fa-sign-in"></i></a>
+                    <a className="navLink" href="/userSignUp">user signup{' '}<i class="fa fa-male"></i></a>
+                    <a className="navLink" href="/SiteSignUp">site signup{' '}<i class="fa fa-sitemap"></i></a>
+                    <a className="navLink" href="/DeleteAcc">Delete Acc{' '}<i class="fa fa-trash"></i></a>
+
                 </div>
             </div>
             :  
             <div id="menuBox">
-                <div id="menu"></div>
+                <div id="menu" className='homeMenu'><i class="fa fa-navicon"></i></div>
                 <div id="menuItems">
+                <a href="/" onClick={siteExit} className="navLink firstLink logout">
+                    logOut{' '}<i class="fa fa-sign-out"></i>
+                </a>
                 {mode==='user' ? 
                     <a href="/addNewSite" className="navLink">
-                        add new site
+                        add new site{' '}<i class="fa fa-pencil-square-o"></i>
                     </a>
                 : null}
                 {mode==='user' ? 
                     <a href="/addEmail" className="navLink">
-                        add Email
+                        add Email{' '}<i class="fa fa-pencil-square-o"></i>
                     </a>
                 : null}
                 {mode==='user' ? 
                     <a href="/changeNumber" className="navLink">
-                        change Number
+                        change Number{' '}<i class="fa fa-pencil-square-o"></i>
                     </a>
                 : null}
-                <a href="/" onClick={siteExit} className="navLink firstLink logout">
-                    logOut
-                </a>
+
                 </div>
             </div>
         }
         </header>
     )
 }
-
 export default Header

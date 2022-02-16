@@ -13,6 +13,7 @@ const SiteBox = (props) => {
         },4000)
     }
     
+    
     function getCookie(cname) {
         var name = cname + "=";
         var decodedCookie = decodeURIComponent(document.cookie);

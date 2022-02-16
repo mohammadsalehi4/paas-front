@@ -2,7 +2,7 @@ import React from 'react'
 import './Description.css'
 const Description = () => {
     return (
-        <div id="mainDiv">
+        <div className="mainDiv">
             <div id="DescriptionBox">
                 <h1 className='Dtitle'>what is Pas?</h1>
                 <p className='Dtext'>The purpose of the Pas application is to provide more security for the login process to different sites.<br/>
@@ -63,5 +63,6 @@ const Description = () => {
         </div>
     )
 }
+
 
 export default Description

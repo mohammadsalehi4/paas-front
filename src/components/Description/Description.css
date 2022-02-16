@@ -30,7 +30,14 @@
 }
 
 @media only screen and (max-device-width:768px){
-    #DescriptionBox{
+    .Dtext{
         font-size: 30px;
+    }
+    .Dtitle{
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .Dundertitle{
+        font-size: 35px;
     }
 }

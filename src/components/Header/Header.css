@@ -10,9 +10,9 @@
 
 
 header{
-    position: fixed;
+    position: absolute;
     width: 100%;
-    height: 70px;
+    height: 140px;
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.08);
     z-index: 1;
     background: white;
@@ -28,11 +28,42 @@ header{
     font-size: 40px;
 }
 
-#pas{
+#psolp{
+    display: inline-block;
+    font-family: nunito;
+    margin-left: 172px;
+    font-size: 18px;
+}
+
+
+#ju{
+    padding: 30px 40px;
     position: absolute;
+    top: 27px;
+    float: right;
+    right: 50px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    font-family: nunito;
+    font-size: 17px;
+    min-width: 150px;
+    text-decoration: none;
+    color: white;
+}
+
+#ju:hover{
+    background-color: rgb(0, 30, 68);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#pas{
+    position: relative;
     margin: 12px 80px;
     display: inline-block;
-    
+    display: block;
 }
 
 .navLink{
@@ -44,7 +75,7 @@ header{
     top: 25px;
     font-family: nunito;
     font-size: 17px;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .navLink:hover{
@@ -54,17 +85,38 @@ header{
 }
 
 #menuBox{
-    direction: rtl;
-    
+    direction: ltr;
+    margin-left: 60px;
     
 }
 
+
+#menu{
+    display: none;
+}
+
+@media screen and (max-width:1044px){
+    #ju{
+        display: none;
+    }
+}
+
 @media screen and (max-width:768px){
+
+    #psolp{
+        display: none;
+    }
+
     header{
         position: relative;
         opacity: 1;
+        height: 90px;
     }
     
+    #menu{
+        display: block;
+    }
+
     .firstLink{
         margin-right: 0px;
     }
@@ -73,28 +125,33 @@ header{
         width: 100%;
         text-align: center;
         margin: 12px 0px;
+        
+    }
+
+    #pasLink{
+        font-size: 70px;
     }
     
     #menuBox{
         position: absolute;
-        top: 20px;
+        top: 17px;
         direction: ltr;
         color: black;
         width: 100%;
+        margin-left: 0px;
+        margin-top: 3px;
         
     }
     #menu{
         position: absolute;
         text-align: center;
-        border-style: solid;
-        border-width: 2px;
-        border-color: rgb(230, 230, 230);
-        border-radius: 10px;
-        width: 30px;
-        height: 30px;
+        border-radius: 20px;
+        padding: 10px 13px;
         text-align: center;        
-        left: 7%;
+        left: 0%;
         background: rgb(230, 230, 230);
+        margin-left: 20px;
+        font-size: 25px;
     }
     #menuBox:hover #menuItems{
         display: inline-block;
@@ -103,7 +160,7 @@ header{
         display: none;
         position: relative;
         background-color: rgb(0, 27, 77);
-        top: 30px;
+        top: 40px;
         border-radius: 2px;
         overflow: hidden;
         width: 100%;
@@ -127,8 +184,20 @@ header{
     header{
         position: relative;
         opacity: 1;
-        height: 140px;
+        height: 110px;
 
+    }
+
+    #homeMenu{
+        display:inline-block;
+    }
+
+    #menu{
+        display: inline-block;
+    }
+
+    #psolp{
+        display: none;
     }
     
     #pasLink{
@@ -143,14 +212,17 @@ header{
         width: 100%;
         text-align: center;
         margin: 10px 0px;
+
     }
     
     #menuBox{
         position: absolute;
-        top: 20px;
+        top: 10px;
         direction: ltr;
         color: black;
         width: 100%;
+        left: 0px;
+        margin-left: 0px;
         
     }
     #menu{
@@ -160,12 +232,13 @@ header{
         border-width: 2px;
         border-color: rgb(230, 230, 230);
         border-radius: 30px;
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         text-align: center;        
-        left: 7%;
+        left: 3%;
         top: 15px;
         background: rgb(230, 230, 230);
+        font-size: 50px;
     }
     #menuBox:hover #menuItems{
         display: inline-block;
@@ -177,7 +250,7 @@ header{
         top: 86px;
         border-radius: 2px;
         width: 100%;
-        top: 80px;
+        top: 70px;
     }
     .navLink{
         padding: 10px;

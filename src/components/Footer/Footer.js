@@ -6,7 +6,7 @@ const Footer = () => {
         <footer id="myFooter">
                 <a id="logo" href="/"> Pas </a>
                 <div className="middle">
-                    <p className="h55">CopyRighted by Mohammad Salehi{' '}<i class="fa fa-copyright" aria-hidden="true"></i></p>
+                    <p className="h55">Producted by Mohammad Salehi{' '}<i class="fa fa-copyright" aria-hidden="true"></i></p>
                 </div>
 
                 <div className="beside">
@@ -18,9 +18,10 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="middle1">
-                    <p className="h55">CopyRighted by Mohammad Salehi{' '}<i class="fa fa-copyright" aria-hidden="true"></i></p>
+                    <p className="h55">Producted by Mohammad Salehi{' '}<i class="fa fa-copyright" aria-hidden="true"></i></p>
                 </div>
     </footer>
     )
 }
 export default Footer
+

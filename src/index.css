@@ -34,6 +34,7 @@ body {
     height: 100%;
     font-family: Arial;
     white-space: normal;
+    overflow-x: hidden;
 }
 
 html{
