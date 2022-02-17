@@ -139,7 +139,7 @@ header{
         color: black;
         width: 100%;
         margin-left: 0px;
-        margin-top: 3px;
+        margin-top: 0px;
         
     }
     #menu{
@@ -149,9 +149,10 @@ header{
         padding: 10px 13px;
         text-align: center;        
         left: 0%;
-        background: rgb(230, 230, 230);
+
         margin-left: 20px;
-        font-size: 25px;
+        font-size: 35px;
+        color: white;
     }
     #menuBox:hover #menuItems{
         display: inline-block;
@@ -229,16 +230,14 @@ header{
         position: absolute;
         text-align: center;
         border-style: solid;
-        border-width: 2px;
-        border-color: rgb(230, 230, 230);
-        border-radius: 30px;
+
         width: 60px;
         height: 60px;
         text-align: center;        
         left: 3%;
-        top: 15px;
-        background: rgb(230, 230, 230);
-        font-size: 50px;
+        top: 12px;
+        color: white;
+        font-size: 60px;
     }
     #menuBox:hover #menuItems{
         display: inline-block;

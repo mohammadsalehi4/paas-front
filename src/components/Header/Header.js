@@ -38,6 +38,7 @@ const Header = (props) => {
         window.location.assign("/")
     }
     
+    
     useEffect(()=>{
         setLogin(props.isLogin)
     },[props])

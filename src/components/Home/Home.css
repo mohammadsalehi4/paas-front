@@ -51,11 +51,21 @@
     display: block;
 }
 
-
+.inputButtonN{
+    width: 9.7%;
+    height: 25px;
+    margin-left: 0.25%;
+    margin-top: 1px;
+    border-style: none;
+    background: #003757;
+    color: white;
+    border-radius: 3px;
+    font-size: 20px;
+}
 
 .inputButton{
-    width: 33%;
-    height: 40px;
+    width: 10.8%;
+    height: 25px;
     margin-left: 0.25%;
     margin-top: 1px;
     border-style: none;
@@ -66,6 +76,11 @@
 }
 
 .inputButton:hover{
+    background: #00273d;
+    cursor: pointer;
+}
+
+.inputButtonN:hover{
     background: #00273d;
     cursor: pointer;
 }
@@ -312,6 +327,15 @@
         display: inline-block;
         position: relative;
         height: 225px;
+    }
+
+    #keyboard{
+        width: 100%;
+        margin-top: 28px;
+        display: none;
+        position: relative;
+        left: 0px;
+        opacity: 1;
     }
 
     #newInputBoxU{
@@ -564,13 +588,27 @@
         margin-top: 60px;
     }
     
-    .inputButton{
-        width: 32.6%;
-        height: 110px;
-        margin-left: 0.5%;
-        margin-top: 5px;
+    .inputButtonN{
+        width: 9.7%;
+        height: 85px;
+        margin-left: 0.25%;
+        margin-top: 1px;
         border-style: none;
-        border-radius: 5px;
+        background: #003757;
+        color: white;
+        border-radius: 3px;
+        font-size: 40px;
+    }
+    
+    .inputButton{
+        width: 10.8%;
+        height: 85px;
+        margin-left: 0.25%;
+        margin-top: 1px;
+        border-style: none;
+        background: #003757;
+        color: white;
+        border-radius: 3px;
         font-size: 40px;
     }
     
