@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
 import axios from 'axios'
 import Address from '../../Address'
 
@@ -45,10 +44,17 @@ const ChangePassword = (props) => {
         <div className="mainDiv">
             <div id="notif"></div>
             <div id="inputBox">
-                <h5>change password</h5>
+                <h5 id="titleBox">change password</h5>
                 <input placeholder="new password..." type="password" className="form-control inp1" id="NumberBox"/>
                 <input placeholder="repeat password..." type="password" className="form-control inp1" id="NumberBox1"/>
-                <Button className="inp1 inp4" onClick={Add}>change</Button>
+                <button className="inp2" id="getCode1" onClick={Add}>change</button>
+            </div>
+            <div id="description11">
+                <p className="descP"><h1 className="about">About</h1>
+                On this page, you can change your account password <br/><br/>
+                To do this, the link provided by the site must be correct.<br/><br/>
+                On this page, both users and sites can change their password.<br/><br/>
+                </p>
             </div>
         </div>
     )
