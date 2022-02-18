@@ -149,7 +149,7 @@ const Home = () => {
             <div id="description11">
                 <p className="descP"><h1 className="about">About</h1><br/>
                 This program gives dynamic password capability to different sites.<br/><br/>
-                When logging in to sites that use this service, in addition to the password, you will also need a second dinamic password that is obtained from this service.<br/><br/>
+                When logging in to sites that use this service, in addition to the password, you will also need a second dynamic password that is obtained from this service.<br/><br/>
                 When entering a password, you should use the site keyboard for extra security<br/><br/>
                 All database data is stored encrypted and not decrypted, so it is guaranteed that all data will be completely secure. </p><br/>
                 <p>You can see full instructions and how the service works on <a href='/Description'>this page</a></p>

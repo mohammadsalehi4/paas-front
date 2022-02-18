@@ -24,7 +24,6 @@ const SiteLogin = () => {
                 document.getElementById('notif').style.opacity="0.6"
                 setTimeout(()=>{
                     document.getElementById('notif').style.display="none"
-                    window.location.assign("http://localhost:3000")
                 },4000)
             }
             else{
