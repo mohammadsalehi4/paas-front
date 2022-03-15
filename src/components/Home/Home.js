@@ -9,6 +9,7 @@ const Home = () => {
     const [PassWord,SetPassWord]=useState('')
     const [showPassWord,SetShowPassWord]=useState('Password...')
     const [Upper,SetUpper]=useState(true)
+    const [loading,SetLoading]=useState(false)
 
     function setCookie(cname, cvalue, exhours) {
         var d = new Date();
@@ -26,6 +27,7 @@ const Home = () => {
     },[PassWord])
     
     const UserLogin=()=>{
+        SetLoading(true)
         const Numb=document.getElementById('getNumber').value
         const Pass=PassWord
         axios.post(Address+'/login',{
@@ -33,6 +35,7 @@ const Home = () => {
             'password':Pass
         })
         .then(response=>{
+            SetLoading(false)
             if(response.data.success===true){
                 document.getElementById('getNumber').value=''
                 setCookie('token','Bearer '+response.data.token,1)
@@ -83,7 +86,12 @@ const Home = () => {
                 <input placeholder="Phone Number..." type="text" className="inp1" id="getNumber"/>
                 <input placeholder={showPassWord} disabled type="text" className="inp1"/>
 
-                <button className="inp2" id="getCode1" onClick={UserLogin}>Login</button>
+                {
+                    !loading ?
+                        <button className="inp2" id="getCode1" onClick={UserLogin}>Login</button>
+                    :
+                        <button className="inp2" id="getCode1" onClick={UserLogin}>prossesing...</button>
+                }
                 <a href="/RecoveryAcc" id="recovery">Recovery Account</a> 
                 <div id="keyboard">
 
@@ -123,7 +131,6 @@ const Home = () => {
                         <button className="inputButton" onClick={()=>{if(Upper){addNumber('B')}else{addNumber('b')} }}>{Upper ? 'B' : 'b'}</button>
                         <button className="inputButton" onClick={()=>{if(Upper){addNumber('N')}else{addNumber('n')} }}>{Upper ? 'N' : 'n'}</button>
                         <button className="inputButton" onClick={()=>{if(Upper){addNumber('M')}else{addNumber('m')} }}>{Upper ? 'M' : 'm'}</button>
-
                         <button className="inputButton" onClick={()=>{addNumber('@')}}>@</button>
                         <button className="inputButton" onClick={()=>{addNumber('#')}}>#</button>
                         <button className="inputButton" onClick={()=>{addNumber('$')}}>$</button>
