@@ -13,7 +13,7 @@ const UserSignUp = () => {
         const username=document.getElementById('signupUsernameInput').value
         const password=PassWord
         console.log(username+'||'+password)
-        console.log(Address+'signup')
+        console.log(Address+'/signup')
         axios.post(Address+'/signup',{
             'Number':String(username),
             'password':password

@@ -18,6 +18,7 @@ import ChangePassword from './components/changePassword/changePassword'
 import DelByLink from './components/delByLink/delByLink'
 import SetNumber from './components/setNumber/SetNumber'
 import Description from './components/Description/Description'
+import AutoLogin from './components/AutoLogin/AutoLogin'
 import Address from './Address'
 const App = () => {
 
@@ -92,6 +93,7 @@ const App = () => {
                     <Route path="/changePassword/:mode/:ID/:code" component={ChangePassword}/>
                     <Route path="/delByLink/:Email/:code" component={DelByLink}/>
                     <Route path="/SetNumber/:lastNumber/:newNumber/:code" component={SetNumber}/>
+                    <Route path="/autologin/:Address" component={AutoLogin}/>
                 </main>
             <Footer/>
         </Router>
