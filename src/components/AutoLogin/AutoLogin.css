@@ -31,3 +31,33 @@
     border-radius: 2px;
     font-family: lustra;
   }
+
+  @media only screen and (max-device-width: 768px) {
+    .AutoLogin {
+        background: #003757;
+        color: white;
+        display: inline-block;
+        padding: 0px;
+        margin: 10px 5%;
+        border-radius: 4px;
+        cursor: pointer;
+        min-width: 90%;
+        font-family: nunito;
+        font-size: 55px;
+        margin-top: 60px;
+      }
+      .AutoLogin p {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 0px;
+      }
+      .AutoLogin div {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px 10px;
+        color: #003757;
+        background: #e4e4e4;
+        border-radius: 2px;
+        font-family: lustra;
+      }
+  }
