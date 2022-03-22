@@ -1,0 +1,33 @@
+@font-face {
+    font-family: nunito;
+    src: url('../Home/Nunito.ttf');
+}
+
+.AutoLogin {
+    background: #003757;
+    color: white;
+    display: inline-block;
+    padding: 0px;
+    margin: 10px 0px;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 333px;
+    font-family: nunito;
+    font-size: 25px;
+    margin-top: 30px;
+  }
+  .AutoLogin p {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0px;
+  }
+  .AutoLogin div {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-left: 5px;
+    margin-top: 7px;
+    color: #003757;
+    background: #e4e4e4;
+    border-radius: 2px;
+    font-family: lustra;
+  }
