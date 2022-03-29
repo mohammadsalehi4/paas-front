@@ -4,6 +4,35 @@ import './SiteBox.css'
 import Address from '../../Address';
 const SiteBox = (props) => {
 
+    const [loadingStyle,SetLoadingStyle]=useState(127)
+    const [loading,SetLoading]=useState(false)
+
+    useEffect(()=>{
+        if(loading){
+            const mineser=(mmm)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(mmm)
+                    if(mmm>77){
+                        mineser(mmm-10)
+                    }else{
+                        adder(mmm)
+                    }
+                }, 20);
+            }
+            const adder=(lll)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(lll)
+                    if(lll<177){
+                        adder(lll+10)
+                    }else{
+                        mineser(lll)
+                    }
+                }, 20);
+            }
+            adder(loadingStyle)
+        }
+    },[loading])
+
     function copyToClipboard() {
         navigator.clipboard.writeText(document.getElementsByClassName(props.Address)[0].innerHTML)
         document.getElementById('notif').style.display="block"
@@ -34,7 +63,7 @@ const SiteBox = (props) => {
     const [newTime,SetNewTime]=useState(0)
     
     const getCode=()=>{
-        
+        SetLoading(true)
         const token=getCookie('token')
         axios.post(Address+'/getcode',{
             'Address':props.Address
@@ -44,6 +73,7 @@ const SiteBox = (props) => {
             }
         })
         .then(response=>{
+            SetLoading(false)
             if(response.data.success===true){
                 SetCode(response.data.code)
                 const time=new Date()
@@ -66,7 +96,15 @@ const SiteBox = (props) => {
                 <div id="leftDiv">
                     <h3 id="Address">{props.Address}</h3>
                     <p id="username">{props.Username}</p>
-                    <button onClick={getCode} id="getCode">get Code</button>
+                    {
+                    !loading ?
+                        <button className="inp2" id="getCode" onClick={getCode}>get Code</button>
+                    :
+                        <button className="inp2" id="getCode" onClick={getCode}>
+                            <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
+                            <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
+                        </button>
+                    }
                 </div>
                 <div id="rightDiv">
                     <h5 style={{margin:"20px"}} id="showCode" className={props.Address}>{code}</h5>

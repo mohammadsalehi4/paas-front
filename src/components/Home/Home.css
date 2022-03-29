@@ -219,14 +219,14 @@
 }
 
 #description11{
-    display: inline-block;
+    display: block;
     font-family: nunito;
-    width: 40%;
+    width: 80%;
     padding: 30px;
     min-height: 150px;
-    position: absolute;
-    top: 180px;
-    font-size: 17px;
+    position: relative;
+    font-size: 18px;
+    margin-left: 6%;
 }
 
 #mainPageLogo{
@@ -282,8 +282,28 @@
 
 .about{
     font-weight: bolder;
+    font-size: 35px;
 }
 
+#homeImage{
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+    margin-left: 10%;
+    position: absolute;
+    top: 230px;
+    background: url('./Data-Protection.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.loadingCircle{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-left: 5px;
+    border-radius: 40px;
+}
 
 @media screen and (min-width: 769px) and (max-width: 1044px) {
     #inputBox{
@@ -302,13 +322,25 @@
         width: 30%;
     }
     #description11{
-        display: inline-block;
-        margin-top: -10px;
+        display: block;
         font-family: nunito;
-        width: 30%;
-        padding: 20px;
-        height: 250px;
-        font-size: 15px;
+        width: 80%;
+        padding: 30px;
+        min-height: 150px;
+        position: relative;
+        font-size: 18px;
+        margin-left: 6%;
+    }
+    #homeImage{
+        display: inline-block;
+        width: 400px;
+        height: 300px;
+        margin-left: 0%;
+        position: absolute;
+        top: 230px;
+        background: url('./Data-Protection.png');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
@@ -393,11 +425,26 @@
     }
     #description11{
         display: block;
-        position: relative;
-        left: 5%;
+        font-family: nunito;
         width: 80%;
-        z-index: 3;
-        top: 0px;
+        padding: 30px;
+        min-height: 150px;
+        position: relative;
+        font-size: 18px;
+        margin-left: 6%;
+    }
+
+    #homeImage{
+        display: block;
+        width: 400px;
+        height: 300px;
+        margin-left: 0%;
+        position: relative;
+        margin-left: 50px;
+        top: 50px;
+        background: url('./Data-Protection.png');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     #notif{
@@ -518,15 +565,27 @@
         font-family: nunito;
         font-weight: bold;
     }
-    
     #description11{
         display: block;
+        font-family: nunito;
+        width: 80%;
+        padding: 30px;
+        min-height: 150px;
         position: relative;
-        left: 7%;
-        width: 85%;
-        font-size:36px;
-        height: auto;
-        top: 0px;
+        font-size: 28px;
+        margin-left: 6%;
+    }
+
+    #homeImage{
+        display: block;
+        width: 600px;
+        height: 450px;
+        position: relative;
+        margin-left: 170px;
+        top: 50px;
+        background: url('./Data-Protection.png');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     #notif{
@@ -621,4 +680,11 @@
         display: none;
     }
     
+    .loadingCircle{
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        margin-left: 12px;
+        border-radius: 40px;
+    }
 }

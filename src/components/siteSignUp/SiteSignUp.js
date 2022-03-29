@@ -1,10 +1,40 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import { Button } from 'react-bootstrap'
 import axios from 'axios'
 import './SiteSignUp.css'
 import Address from '../../Address'
 const SiteSignUp = () => {
+    const [loadingStyle,SetLoadingStyle]=useState(127)
+    const [loading,SetLoading]=useState(false)
+
+    useEffect(()=>{
+        if(loading){
+            const mineser=(mmm)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(mmm)
+                    if(mmm>77){
+                        mineser(mmm-10)
+                    }else{
+                        adder(mmm)
+                    }
+                }, 20);
+            }
+            const adder=(lll)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(lll)
+                    if(lll<177){
+                        adder(lll+10)
+                    }else{
+                        mineser(lll)
+                    }
+                }, 20);
+            }
+            adder(loadingStyle)
+        }
+    },[loading])
+
     const siteSignUp=()=>{
+        SetLoading(true)
         const username=document.getElementById('signupSiteNumberInput').value
         const address=document.getElementById('signupSiteddressInput').value
         const password=document.getElementById('signupSitePasswordInput').value
@@ -15,6 +45,7 @@ const SiteSignUp = () => {
             'password':password
         })
         .then(response=>{
+            SetLoading(false)
             if(response.data.success===true){
                 document.getElementById('signupSiteNumberInput').value=''
                 document.getElementById('signupSiteddressInput').value=''
@@ -92,8 +123,17 @@ const SiteSignUp = () => {
                     <input placeholder="Phone Number..." type="text" className=" inp1" id="signupSiteNumberInput" />
                     <input placeholder="Address..." type="text" className=" inp1" id="signupSiteddressInput" />
                     <input placeholder="Password..." type="password" className=" inp1" id="signupSitePasswordInput"/>
-                    <button className="inp2" id="getCode1" onClick={siteSignUp}>signUp</button>
+                    {
+                        !loading ?
+                            <button className="inp2" id="getCode1" onClick={siteSignUp}>signUp</button>
+                        :
+                            <button className="inp2" id="getCode1" onClick={siteSignUp}>
+                                <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
+                                <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
+                            </button>
+                    }
             </div>
+            <div id='homeImage' ></div>
             <div id="description11">
                 <p className="descP"><h1 className="about">About</h1>
                 On this page, different sites can register to use this service<br/><br/>

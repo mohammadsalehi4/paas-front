@@ -32,6 +32,18 @@
     font-family: lustra;
   }
 
+  #ALImage{
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+    margin-left: 10%;
+    position: absolute;
+    top: 230px;
+    background: url('./Mobile-login.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
   @media only screen and (max-device-width: 768px) {
     .AutoLogin {
         background: #003757;

@@ -1,9 +1,38 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import axios from 'axios'
 import Address from '../../Address'
 import './AddNewSite.css'
 
 const AddNewSite = () => {
+
+    const [loadingStyle,SetLoadingStyle]=useState(127)
+    const [loading,SetLoading]=useState(false)
+
+    useEffect(()=>{
+        if(loading){
+            const mineser=(mmm)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(mmm)
+                    if(mmm>77){
+                        mineser(mmm-10)
+                    }else{
+                        adder(mmm)
+                    }
+                }, 20);
+            }
+            const adder=(lll)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(lll)
+                    if(lll<177){
+                        adder(lll+10)
+                    }else{
+                        mineser(lll)
+                    }
+                }, 20);
+            }
+            adder(loadingStyle)
+        }
+    },[loading])
 
     function getCookie(cname) {
         var name = cname + "=";
@@ -22,6 +51,7 @@ const AddNewSite = () => {
     }
 
     const Add=()=>{
+        SetLoading(true)
         const token=getCookie('token')
         axios.post(Address+'/AddSiteToDb',{
             Address:document.getElementById('AddressBox').value,
@@ -33,6 +63,7 @@ const AddNewSite = () => {
             }
         })
         .then(response=>{
+            SetLoading(false)
             if(response.data.success===true){
                 alert('added')
                 window.location.reload()
@@ -56,7 +87,15 @@ const AddNewSite = () => {
                 <input placeholder="Site Address..." type="text" className="inp1" id="AddressBox"/>
                 <input placeholder="Username..." type="text" className="inp1" id="UsernameBox"/>
                 <input placeholder="Code..." type="text" className="inp1" id="CodeBox"/>
-                <button className="inp2" id="getCode1" onClick={Add} >Add Site</button>
+                {
+                    !loading ?
+                        <button className="inp2" id="getCode1" onClick={Add}>Add Site</button>
+                    :
+                        <button className="inp2" id="getCode1" onClick={Add}>
+                            <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
+                            <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
+                        </button>
+                }
             </div>
             <div id="description11" className="Dplus">
                 <h1 className="about">About</h1><br/>

@@ -1,8 +1,36 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import Address from '../../Address'
 import './AddEmai.css'
 const AddEmail = () => {
+    const [loadingStyle,SetLoadingStyle]=useState(127)
+    const [loading,SetLoading]=useState(false)
+
+    useEffect(()=>{
+        if(loading){
+            const mineser=(mmm)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(mmm)
+                    if(mmm>77){
+                        mineser(mmm-10)
+                    }else{
+                        adder(mmm)
+                    }
+                }, 20);
+            }
+            const adder=(lll)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(lll)
+                    if(lll<177){
+                        adder(lll+10)
+                    }else{
+                        mineser(lll)
+                    }
+                }, 20);
+            }
+            adder(loadingStyle)
+        }
+    },[loading])
 
     function getCookie(cname) {
         var name = cname + "=";
@@ -21,6 +49,7 @@ const AddEmail = () => {
     }
 
     const Add=()=>{
+        SetLoading(true)
         const token=getCookie('token')
         axios.post(Address+'/AddEmail',{
             Email:document.getElementById('EmailBox').value
@@ -30,6 +59,7 @@ const AddEmail = () => {
             }
         })
         .then(response=>{
+            SetLoading(false)
             if(response.data.success===true){
                 alert(response.data.link)
             }else{
@@ -42,8 +72,17 @@ const AddEmail = () => {
             <div id="inputBox6">
                 <h5  id="titleBox">Add Email</h5>
                 <input placeholder="Email..." type="text" className="inp1" id="EmailBox"/>
-                <button className="inp2" id="getCode1" onClick={Add}>send verify Link</button>
+                {
+                    !loading ?
+                        <button className="inp2" id="getCode1" onClick={Add}>send verify Link</button>
+                    :
+                        <button className="inp2" id="getCode1" onClick={Add}>
+                            <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
+                            <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
+                        </button>
+                }
             </div>
+            <div id='homeImage' ></div>
             <div id="description11" className="Dplus">
                 <h1 className="about">About</h1><br/>
                 <p>In this page, you can add your Email.<br/><br/>

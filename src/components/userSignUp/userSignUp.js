@@ -9,7 +9,37 @@ const UserSignUp = () => {
     const [showPassWord,SetShowPassWord]=useState('Password...')
     const [Upper,SetUpper]=useState(true)
 
+    const [loadingStyle,SetLoadingStyle]=useState(127)
+    const [loading,SetLoading]=useState(false)
+
+    useEffect(()=>{
+        if(loading){
+            const mineser=(mmm)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(mmm)
+                    if(mmm>77){
+                        mineser(mmm-10)
+                    }else{
+                        adder(mmm)
+                    }
+                }, 20);
+            }
+            const adder=(lll)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(lll)
+                    if(lll<177){
+                        adder(lll+10)
+                    }else{
+                        mineser(lll)
+                    }
+                }, 20);
+            }
+            adder(loadingStyle)
+        }
+    },[loading])
+
     const signUp=()=>{
+        SetLoading(true)
         const username=document.getElementById('signupUsernameInput').value
         const password=PassWord
         console.log(username+'||'+password)
@@ -19,6 +49,7 @@ const UserSignUp = () => {
             'password':password
         })
         .then(response=>{
+            SetLoading(false)
             if(response.data.success===true){
                 document.getElementById('signupUsernameInput').value=''
                 SetPassWord('')
@@ -100,7 +131,16 @@ const UserSignUp = () => {
                     <input placeholder="Phone Number..." type="text" className="inp1" id="signupUsernameInput"/>
                     <input placeholder={showPassWord} disabled type="text" className="inp1" id="getNumber"/>
 
-                <button className="inp2" id="getCode1" onClick={signUp}>SignUp</button>
+                {
+                    !loading ?
+                        <button className="inp2" id="getCode1" onClick={signUp}>SignUp</button>
+                    :
+                        <button className="inp2" id="getCode1" onClick={signUp}>
+                            <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
+                            <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
+                        </button>
+                }
+
                 <div id="keyboard">
 
                         <button className="inputButtonN topbtn" onClick={()=>{addNumber(1)}}>1</button>
@@ -162,6 +202,7 @@ const UserSignUp = () => {
 
                 </div>  
             </div>
+            <div id='homeImage' ></div>
             <div id="description11" className="Dplus">
                 <h1 className="about">About</h1>
                 <p>Users can register on this page.<br/><br/>

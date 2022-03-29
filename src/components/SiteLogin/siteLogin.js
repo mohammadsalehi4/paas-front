@@ -1,14 +1,44 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import './siteLogin.css'
 import axios from 'axios'
 import Address from '../../Address'
 const SiteLogin = () => {
     
+    const [loadingStyle,SetLoadingStyle]=useState(127)
+    const [loading,SetLoading]=useState(false)
+
+    useEffect(()=>{
+        if(loading){
+            const mineser=(mmm)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(mmm)
+                    if(mmm>77){
+                        mineser(mmm-10)
+                    }else{
+                        adder(mmm)
+                    }
+                }, 20);
+            }
+            const adder=(lll)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(lll)
+                    if(lll<177){
+                        adder(lll+10)
+                    }else{
+                        mineser(lll)
+                    }
+                }, 20);
+            }
+            adder(loadingStyle)
+        }
+    },[loading])
+
     function copyToClipboard(getToken) {
         navigator.clipboard.writeText(getToken)
     }
     
     const siteLogin=()=>{
+        SetLoading(true)
         const Numb=document.getElementById('getNumber').value
         const Pass=document.getElementById('getPassword').value
         axios.post(Address+'/siteLogin',{
@@ -17,6 +47,7 @@ const SiteLogin = () => {
         })
         .then(response=>{
             if(response.data.success===true){
+                SetLoading(false)
                 const givenToken='Bearer '+response.data.token
                 copyToClipboard(givenToken)
                 document.getElementById('notif').style.display="block"
@@ -27,6 +58,7 @@ const SiteLogin = () => {
                 },4000)
             }
             else{
+                SetLoading(false)
                 document.getElementById('getPassword').value=''
                 document.getElementById('getNumber').value=''
                 document.getElementById('notif').style.display="block"
@@ -46,9 +78,20 @@ const SiteLogin = () => {
                 <h5 id="titleBox">site login</h5>
                 <input placeholder="Phone Number..." type="text" className="inp1" id="getNumber"/>
                 <input placeholder="Password..." type="password" className="inp1"  id="getPassword"/>
-                <button className="inp2" id="getCode1" onClick={siteLogin}>Login</button>
+
+                {
+                    !loading ?
+                        <button className="inp2" id="getCode1" onClick={siteLogin}>Login</button>
+                    :
+                        <button className="inp2" id="getCode1" onClick={siteLogin}>
+                            <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
+                            <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
+                        </button>
+                }
+
                 <a href="/siteRecovery" id="recovery">Recovery Account</a>
             </div>
+            <div id='homeImage' ></div>
             <div id="description11">
                 <p className="descP"><h1 className="about">About</h1>
                 On this page, sites can log in to receive their own token.<br/><br/>

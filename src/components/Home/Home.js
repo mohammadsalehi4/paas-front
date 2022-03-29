@@ -10,6 +10,7 @@ const Home = () => {
     const [showPassWord,SetShowPassWord]=useState('Password...')
     const [Upper,SetUpper]=useState(true)
     const [loading,SetLoading]=useState(false)
+    const [loadingStyle,SetLoadingStyle]=useState(127)
 
     function setCookie(cname, cvalue, exhours) {
         var d = new Date();
@@ -26,6 +27,33 @@ const Home = () => {
         }
     },[PassWord])
     
+    useEffect(()=>{
+        if(loading){
+            const mineser=(mmm)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(mmm)
+                    if(mmm>77){
+                        mineser(mmm-10)
+                    }else{
+                        adder(mmm)
+                    }
+                }, 20);
+            }
+            const adder=(lll)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(lll)
+                    if(lll<177){
+                        adder(lll+10)
+                    }else{
+                        mineser(lll)
+                    }
+                }, 20);
+            }
+            adder(loadingStyle)
+        }
+    },[loading])
+
+
     const UserLogin=()=>{
         SetLoading(true)
         const Numb=document.getElementById('getNumber').value
@@ -90,7 +118,10 @@ const Home = () => {
                     !loading ?
                         <button className="inp2" id="getCode1" onClick={UserLogin}>Login</button>
                     :
-                        <button className="inp2" id="getCode1" onClick={UserLogin}>prossesing...</button>
+                        <button className="inp2" id="getCode1" onClick={UserLogin}>
+                            <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
+                            <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
+                        </button>
                 }
                 <a href="/RecoveryAcc" id="recovery">Recovery Account</a> 
                 <div id="keyboard">
@@ -153,6 +184,7 @@ const Home = () => {
 
                 </div>     
             </div>
+            <div id='homeImage' ></div>
             <div id="description11">
                 <p className="descP"><h1 className="about">About</h1><br/>
                 This program gives dynamic password capability to different sites.<br/><br/>
