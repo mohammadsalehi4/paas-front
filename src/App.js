@@ -19,6 +19,7 @@ import DelByLink from './components/delByLink/delByLink'
 import SetNumber from './components/setNumber/SetNumber'
 import Description from './components/Description/Description'
 import AutoLogin from './components/AutoLogin/AutoLogin'
+import HomeLoading from './components/HomeLoading/HomeLoading'
 import Address from './Address'
 const App = () => {
 
@@ -47,9 +48,9 @@ const App = () => {
     
     const [login,setlogin]=useState(false)
     const [mode,setMode]=useState('')
+    const [loading,setLoading]=useState(true)
     
     useEffect(()=>{
-        console.log('Address:'+Address)
         const getToken=getCookie('token')
         const getMode=getCookie('mode')
 
@@ -62,40 +63,48 @@ const App = () => {
                 if(response.data.find===true){
                     setlogin(true)
                     setMode(getMode)
+                    setLoading(false)
                 }else{
                     setlogin(false)
                     setCookie('token',getToken,0)
                     setCookie('mode',getMode,0)
+                    setLoading(false)
                     window.location.assign('/')
                 }
             })
-        }
+            .catch(err=>{
+                setLoading(false)
+            })
+        }else{setLoading(false)}
     },[])
     
     return (
         <Router>
-            <Header isLogin={login} mode={mode}/>
-                <main className="py-3">
-                    {!login ? <Route path="/" component={Home} exact/> 
-                    : ( mode==='user' ? 
-                        ( <Route path="/" component={Dashboard} exact/>) 
-                    : <Route path="/" component={Home} exact/>)}
-                    <Route path="/userSignUp" component={UserSignUp}/>
-                    <Route path="/SiteSignUp" component={SiteSignUp}/>
-                    <Route path="/RecoveryAcc" component={Recovery}/>
-                    <Route path="/DeleteAcc" component={DeleteAcc}/>
-                    <Route path="/addEmail" component={AddEmail}/>
-                    <Route path="/changeNumber" component={ChangeNumber}/>
-                    <Route path="/addNewSite" component={AddNewSite}/>
-                    <Route path="/siteLogin" component={SiteLogin}/>
-                    <Route path="/Description" component={Description}/>
-                    <Route path="/siteRecovery" component={siteRecovery}/>
-                    <Route path="/changePassword/:mode/:ID/:code" component={ChangePassword}/>
-                    <Route path="/delByLink/:Email/:code" component={DelByLink}/>
-                    <Route path="/SetNumber/:lastNumber/:newNumber/:code" component={SetNumber}/>
-                    <Route path="/autologin/:Address" component={AutoLogin}/>
-                </main>
-            <Footer/>
+            {loading ? 
+                    <HomeLoading/> 
+                :
+                    <><Header isLogin={login} mode={mode} /><main className="py-3">
+                        {!login ? <Route path="/" component={Home} exact />
+                        : (mode === 'user' ?
+                        (<Route path="/" component={Dashboard} exact />)
+                        : <Route path="/" component={Home} exact />)}
+                        <Route path="/userSignUp" component={UserSignUp} />
+                        <Route path="/SiteSignUp" component={SiteSignUp} />
+                        <Route path="/RecoveryAcc" component={Recovery} />
+                        <Route path="/DeleteAcc" component={DeleteAcc} />
+                        <Route path="/addEmail" component={AddEmail} />
+                        <Route path="/changeNumber" component={ChangeNumber} />
+                        <Route path="/addNewSite" component={AddNewSite} />
+                        <Route path="/siteLogin" component={SiteLogin} />
+                        <Route path="/Description" component={Description} />
+                        <Route path="/siteRecovery" component={siteRecovery} />
+                        <Route path="/changePassword/:mode/:ID/:code" component={ChangePassword} />
+                        <Route path="/delByLink/:Email/:code" component={DelByLink} />
+                        <Route path="/SetNumber/:lastNumber/:newNumber/:code" component={SetNumber} />
+                        <Route path="/autologin/:Address" component={AutoLogin} />
+                    </main><Footer /></>
+            }
+
         </Router>
     )
 }

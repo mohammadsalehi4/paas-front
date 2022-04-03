@@ -3,6 +3,11 @@
     src: url('./Nunito.ttf');
 }
 
+@font-face {
+    font-family: 'lustra';
+    src: url('./Lustramd.otf');
+}
+
 #newInputBox{
     width: 400px;
     background: url('./bg9.jpg');
@@ -305,6 +310,27 @@
     border-radius: 40px;
 }
 
+#innerLoading{
+    font-family: lustra;
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+    margin-top: 300px;
+    display: block;
+    color: #003757;
+}
+
+
+.LoadingPoint{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    margin-left: 10px;
+    background: #003757;
+    display: inline-block;
+    transition: 0.2s;
+}
+
 @media screen and (min-width: 769px) and (max-width: 1044px) {
     #inputBox{
         width: 30%;
@@ -464,6 +490,25 @@
 }
 
 @media only screen and (max-device-width: 768px) {
+    #innerLoading{
+        font-family: lustra;
+        font-size: 150px;
+        width: 100%;
+        text-align: center;
+        margin-top: 400px;
+        display: block;
+        color: #003757;
+    }    
+
+    .LoadingPoint{
+        width: 45px;
+        height: 45px;
+        border-radius: 100%;
+        margin-left: 30px;
+        background: #003757;
+        display: inline-block;
+        transition: 0.2s;
+    }
 
     #keyboard{
         display: none;
