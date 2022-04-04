@@ -8,10 +8,10 @@
     color: white;
     display: inline-block;
     padding: 0px;
-    margin: 10px 0px;
+    margin: 10px auto;
     border-radius: 4px;
     cursor: pointer;
-    min-width: 333px;
+    min-width: 363px;
     font-family: nunito;
     font-size: 25px;
     margin-top: 30px;
@@ -20,6 +20,7 @@
     display: inline-block;
     padding: 10px 20px;
     margin: 0px;
+    margin-left: 20px;
   }
   .AutoLogin div {
     display: inline-block;
@@ -44,7 +45,52 @@
     background-size: cover;
 }
 
-  @media only screen and (max-device-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1044px) {
+  .AutoLogin {
+    background: #003757;
+    color: white;
+    display: inline-block;
+    padding: 0px;
+    margin: 10px 0px;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 330px;
+    font-family: nunito;
+    font-size: 25px;
+    margin-top: 30px;
+  }
+
+  .AutoLogin p {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .AutoLogin {
+    background: #003757;
+    color: white;
+    display: inline-block;
+    padding: 0px;
+    margin: 30px auto;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 90%;
+    font-family: nunito;
+    font-size: 25px;
+  }
+
+  .AutoLogin p {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0px;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
     .AutoLogin {
         background: #003757;
         color: white;

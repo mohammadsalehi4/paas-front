@@ -6,7 +6,7 @@ import './AutoLogin.css'
 
 const AutoLogin = (props) => {
 
-  const [isLogin,SetIsLogin]=useState(true)
+  const [isLogin,SetIsLogin]=useState(false)
   const [PassWord,SetPassWord]=useState('')
   const [showPassWord,SetShowPassWord]=useState('Password...')
   const [Upper,SetUpper]=useState(true)
