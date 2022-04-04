@@ -190,6 +190,8 @@ const Home = () => {
                 This program gives dynamic password capability to different sites.<br/><br/>
                 When logging in to sites that use this service, in addition to the password, you will also need a second dynamic password that is obtained from this service.<br/><br/>
                 When entering a password, you should use the site keyboard for extra security<br/><br/>
+                in addition to the dynamic password, this program provide auto login service for sites.<br/><br/>
+                this service is like auto login with Gmail and users can login with their Pas account.<br/><br/>
                 All database data is stored encrypted and not decrypted, so it is guaranteed that all data will be completely secure. </p><br/>
                 <p>You can see full instructions and how the service works on <a href='/Description'>this page</a></p>
                 
