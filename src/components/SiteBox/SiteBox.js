@@ -7,6 +7,9 @@ const SiteBox = (props) => {
     const [loadingStyle,SetLoadingStyle]=useState(127)
     const [loading,SetLoading]=useState(false)
 
+    const [loadingStyle1,SetLoadingStyle1]=useState(127)
+    const [loading1,SetLoading1]=useState(false)
+
     useEffect(()=>{
         if(loading){
             const mineser=(mmm)=>{
@@ -32,6 +35,32 @@ const SiteBox = (props) => {
             adder(loadingStyle)
         }
     },[loading])
+
+    useEffect(()=>{
+        if(loading1){
+            const mineser=(mmm)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(mmm)
+                    if(mmm>77){
+                        mineser(mmm-10)
+                    }else{
+                        adder(mmm)
+                    }
+                }, 20);
+            }
+            const adder=(lll)=>{
+                setTimeout(() => {
+                    SetLoadingStyle(lll)
+                    if(lll<177){
+                        adder(lll+10)
+                    }else{
+                        mineser(lll)
+                    }
+                }, 20);
+            }
+            adder(loadingStyle1)
+        }
+    },[loading1])
 
     function copyToClipboard() {
         navigator.clipboard.writeText(document.getElementsByClassName(props.Address)[0].innerHTML)
@@ -82,6 +111,32 @@ const SiteBox = (props) => {
             }
         })
     }
+
+    const autoLogin=()=>{
+        SetLoading1(true)
+        axios.post(Address+'/autologin',{
+            token:getCookie('token'),
+            address:props.Address
+        },{
+        headers:{
+                authorization:getCookie('token')
+            }
+        })
+        .then(response=>{
+            if(response.data.success){
+                const newLink='http://'+props.Address+'/pasautologin/'+response.data.username+'/'+response.data.loginCode
+                window.location.assign(newLink)
+                SetLoading1(false)
+            }else{
+                SetLoading1(false)
+            }
+        })
+        .catch(err=>{
+            SetLoading1(false)
+            console.log(err)
+        })
+    }
+
     useEffect(()=>{
         if((newTime-props.now)<=0){
             SetCode('No Code!')
@@ -105,6 +160,15 @@ const SiteBox = (props) => {
                             <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
                         </button>
                     }
+                    {
+                    !loading1 ?
+                        <button className="inp2" id="getCode" onClick={autoLogin}>Auto Login</button>
+                    :
+                        <button className="inp2" id="getCode" onClick={autoLogin}>
+                            <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
+                            <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
+                        </button>
+                    }
                 </div>
                 <div id="rightDiv">
                     <h5 style={{margin:"20px"}} id="showCode" className={props.Address}>{code}</h5>
@@ -120,7 +184,24 @@ const SiteBox = (props) => {
                 <div id="leftDiv">
                     <h3 id="Address">{props.Address}</h3>
                     <p id="username">{props.Username}</p>
-                    <button onClick={getCode} id="getCode">get Code</button>
+                    {
+                    !loading ?
+                        <button className="inp2" id="getCode" onClick={getCode}>get Code</button>
+                    :
+                        <button className="inp2" id="getCode" onClick={getCode}>
+                            <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
+                            <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
+                        </button>
+                    }
+                    {
+                    !loading1 ?
+                        <button className="inp2" id="getCode" onClick={autoLogin}>Auto Login</button>
+                    :
+                        <button className="inp2" id="getCode" onClick={autoLogin}>
+                            <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
+                            <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
+                        </button>
+                    }
                 </div>
                 <div id="rightDiv">
                     <h5 style={{margin:"20px"}} id="showCode" className={props.Address}>{code}</h5>
