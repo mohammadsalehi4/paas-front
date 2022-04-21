@@ -7,7 +7,6 @@ const HomeLoading = () => {
         const adder=(lll)=>{
             setTimeout(() => {
                 SetcolorNumber(lll)
-                console.log(lll)
                 adder(lll+1)
             }, 200);
         }

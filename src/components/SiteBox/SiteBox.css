@@ -10,31 +10,54 @@
 
 #getCode{
     display: inline-block;
-    width: 40%;
-    height: 70px;
-    font-size: 25px;
-    background-color: #003757;
-    color: white;
+    width: 38%;
+    height: 60px;
+    border-radius: 12px;
     border-style: none;
-    border-radius: 20px;
+    background:#003757;
+    color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 #getCode:hover{
     background-color: #002236;
+    transition: 0.2s;
 }
 
 #showCode{
     display: inline-block;
-    font-size: 70px;
+    font-size: 60px;
     font-family: lustra;
 }
 
 #leftDiv{
-    height: 150px;
-    width: 40%;
+    height: 100px;
+    width: 13%;
     display: inline-block;
     padding: 10px 20px;
     padding-bottom: 0px;
+    position: absolute;
+}
+
+#SmiddleDiv{
+    height: 100px;
+    width: 50%;
+    height: 150px;
+    display: block;
+    position: absolute;
+}
+
+#rightDiv{
+    height: 100px;
+    width:25%;
+    margin-left: 5%;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    margin-left: 20%;
 }
 
 .outProgress{
@@ -44,6 +67,7 @@
     margin: 10px 0px;
     border-radius: 3.5px;
     overflow: hidden;
+    margin-top: 110px;
 }
 
 .inProgress{
@@ -52,34 +76,47 @@
     transition: 0.8s;
 }
 
-#rightDiv{
-    height: 100px;
-    width: 40%;
-    margin-left: 5%;
-    text-align: center;
-    display: inline-block;
-}
 .PRBox{
     height: 15px;
     margin-top: 30px;
 }
 
 #Address{
-    font-size: 17px;
+    font-size: 24px;
     font-family: lustra;
-    margin: 0px auto;
+    margin: 10px auto;
 }
 
 #username{
-    font-size: 15px;
+    font-size: 20px;
     font-family: nunito;
-    margin: 0px auto;
+    margin: 10px auto;
+
 }
 
-@media screen and (min-width: 769px) and (max-width: 960px) {
+#SBLogo{
+
+    height: 120px;
+
+    display: inline-block;
+}
+
+#trash{
+    display: inline-block;
+    font-size: 60px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 2%;
+    position: absolute;
+    top: 20px;
+}
+
+
+
+@media screen and (min-width: 1200px) and (max-width: 1420px) {
     #leftDiv{
         height: 100px;
-        width: 20%;
+        width: 23%;
         display: inline-block;
         padding: 15px;
     }
@@ -87,52 +124,177 @@
     #getCode{
         display: inline-block;
         font-size: 14px;
-        width: 90%;
-        height: 50px;
+        width: 35%;
+        height: 40px;
         font-size: 15px;
+        margin-top: 10px;
     }
     
     #showCode{
         display: inline-block;
-        font-size: 60px;
+        font-size: 50px;
         font-family: lustra;
     }
     
     #rightDiv{
         height: 130px;
-        width: 50%;
-        margin-left: 10%;
+        width: 23%;
+        margin-left: 19%;
         text-align: center;
         display: inline-block;
+        position: absolute;
+    }
+    
+    #SmiddleDiv{
+        height: 100px;
+        width: 50%;
+        height: 150px;
+        display: inline-block;
+        position: absolute;
+        margin-top: 130px;
     }
 
+    #trash{
+        display: inline-block;
+        font-size: 40px;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 2%;
+        position: absolute;
+        top: 10px;
+    }
+
+    .outProgress{
+        margin-top: 70px;
+    }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    #leftDiv{
+        height: 100px;
+        width: 23%;
+        display: inline-block;
+        padding: 15px;
+    }
+    
     #getCode{
         display: inline-block;
-        width: 100%;
+        font-size: 14px;
+        width: 35%;
         height: 40px;
-        font-size: 80%;
-        padding: 2px;   
+        font-size: 15px;
+        margin-top: 10px;
     }
+    
     #showCode{
         display: inline-block;
         font-size: 30px;
         font-family: lustra;
     }
     
+    #rightDiv{
+        height: 130px;
+        width: 23%;
+        margin-left: 19%;
+        text-align: center;
+        display: inline-block;
+        position: absolute;
+    }
+    
+    #SmiddleDiv{
+        height: 100px;
+        width: 50%;
+        height: 150px;
+        display: inline-block;
+        position: absolute;
+        margin-top: 80px;
+    }
+
+    #trash{
+        display: inline-block;
+        font-size: 30px;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 2%;
+        position: absolute;
+        top: 15px;
+    }
+
+    .outProgress{
+        margin-top: 30px;
+    }
+
+    #Address{
+        font-size: 15px;
+        font-family: lustra;
+        margin: 10px auto;
+    }
+    
+    #username{
+        font-size: 12px;
+        font-family: nunito;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width:768px) {
+    #SBLogo{
+        height: 50px;
+        display: inline-block;
+    }
+    
+    .outProgress{
+        height: 12px;
+        width: 90%;
+        
+        background: #8d9eb1;
+        margin: 85px 5%;
+        border-radius: 3.5px;
+        overflow: hidden;
+
+    }
+    
+    .inProgress{
+        height: 12px;
+        background: #003757;
+        transition: 0.8s;
+    }
+
+    #getCode{
+        display: inline-block;
+        width: 37%;
+        height: 40px;
+        font-size: 80%;
+        padding: 2px;   
+    }
+    #showCode{
+        display: inline-block;
+        font-size: 34px;
+        font-family: lustra;
+
+    }
+    
     #leftDiv{
         width: 30%;
         display: inline-block;
         padding: 20px;
         height: 100px;
     }
+
+    #SmiddleDiv{
+        height: 100px;
+        width: 84%;
+        height: 150px;
+        display: inline-block;
+        margin-left: 0%;
+        position: absolute;
+        margin-top: 60px;
+    }
     
     #rightDiv{
         width: 50%;
         height: 50px;
-        margin-left: 5%;
+        margin-left: 32%;
         text-align: center;
         display: inline-block;
     }
@@ -140,12 +302,13 @@
     #Address{
         font-size: 15px;
         font-family: lustra;
-        
+        margin-top: 0px;
     }
     
     #username{
         font-size: 12px;
         font-family: nunito;
+        margin-top: 0px;
     }
     .PRBox{
         height: 10px;
@@ -153,23 +316,67 @@
     #highPR{
         height:"10px";
     }
+
+    #trash{
+        display: inline-block;
+        font-size: 30px;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 2%;
+        position: absolute;
+        top: 25px;
+    }
 }
 
+
 @media only screen and (max-device-width:768px) {
-    #getCode{
+    #SBLogo{
+        height: 350px;
+        width: 20px;
         display: inline-block;
-        width: 100%;
-        height: 70px;
-        font-size: 35px;
-        padding: 2px;
-        margin-top: 30px;
-        border-radius: 12px;
+        background: #003757;
+        position: relative;
+        margin-top: -6px;
     }
     
+    .outProgress{
+        height: 22px;
+        width: 90%;
+        background: #8d9eb1;
+        margin: -60px 5%;
+        border-radius: 35px;
+        overflow: hidden;
+
+    }
+    
+    .inProgress{
+        height: 22px;
+        background: #003757;
+        transition: 0.8s;
+    }
+
+    #getCode{
+        display: inline-block;
+        width: 380px;
+        height: 80px;
+        border-radius: 12px;
+        border-style: none;
+        background:#003757;
+        color: white;
+        margin-top: 20px;
+        margin-left: 0px;
+        font-size: 20px;
+        font-size: 45px;
+        font-family: nunito;
+    }
     #showCode{
         display: inline-block;
-        font-size: 70px;
+        font-size: 60px;
         font-family: lustra;
+        padding: 10px 30px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        width: 350px;
     }
     
     #leftDiv{
@@ -178,11 +385,22 @@
         padding: 20px;
         height: 100px;
     }
+
+    #SmiddleDiv{
+        height: 100px;
+        width: 90%;
+        height: 150px;
+        display: inline-block;
+        margin-left: 0%;
+        position: absolute;
+        margin-top: 160px;
+        text-align: center;
+    }
     
     #rightDiv{
-        width: 60%;
+        width: 50%;
         height: 50px;
-        margin-left: 5%;
+        margin-left: 38%;
         text-align: center;
         display: inline-block;
     }
@@ -190,20 +408,29 @@
     #Address{
         font-size: 40px;
         font-family: lustra;
+        margin-top: 0px;
+        margin-left: 5%;
     }
     
     #username{
-        font-size: 40px;
+        font-size: 35px;
         font-family: nunito;
+        margin-left: 5%;
+        margin-top: 0px;
     }
     .PRBox{
         height: 10px;
     }
     #highPR{
         height:"10px";
-        margin-top: 60px;
     }
-    .outProgress{
-        margin-top: 50px;
+
+    #trash{
+        display: inline-block;
+        font-size: 75px;
+        position: absolute;
+    }
+    #trash:hover{
+        color: #002236;
     }
 }

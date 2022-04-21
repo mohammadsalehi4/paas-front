@@ -133,7 +133,25 @@ const SiteBox = (props) => {
         })
         .catch(err=>{
             SetLoading1(false)
-            console.log(err)
+        })
+    }
+
+    const deleteSite=()=>{
+        alert('yes')
+        axios.post(Address+'/deletesite',{
+            address:props.Address
+        },{
+            headers:{
+                authorization:getCookie('token')
+            }
+        })
+        .then(response=>{
+            if(response.data.success===true){
+                alert('Deleted')
+                window.location.assign('/')
+            }else{
+                alert('unsuccessful')
+            }
         })
     }
 
@@ -148,30 +166,40 @@ const SiteBox = (props) => {
     if(props.boxID===0){
         return (
             <div className="siteBox siteBox1">
+                <div id='SBLogo'></div>
+
                 <div id="leftDiv">
+
                     <h3 id="Address">{props.Address}</h3>
                     <p id="username">{props.Username}</p>
-                    {
-                    !loading ?
-                        <button className="inp2" id="getCode" onClick={getCode}>get Code</button>
-                    :
-                        <button className="inp2" id="getCode" onClick={getCode}>
-                            <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
-                            <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
-                        </button>
-                    }
-                    {
-                    !loading1 ?
-                        <button className="inp2" id="getCode" onClick={autoLogin}>Auto Login</button>
-                    :
-                        <button className="inp2" id="getCode" onClick={autoLogin}>
-                            <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
-                            <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
-                        </button>
-                    }
                 </div>
+
                 <div id="rightDiv">
                     <h5 style={{margin:"20px"}} id="showCode" className={props.Address}>{code}</h5>
+
+                </div>
+                <div id='SmiddleDiv'>
+                    {
+                        !loading ?
+                            <button  id="getCode" onClick={getCode}>get Code</button>
+                        :
+                            <button  id="getCode" onClick={getCode}>
+                                <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
+                                <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
+                            </button>
+                        }
+                        {
+                        !loading1 ?
+                            <button  id="getCode" onClick={autoLogin}>Auto Login</button>
+                        :
+                            <button  id="getCode" onClick={autoLogin}>
+                                <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
+                                <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
+                            </button>
+                        }
+                    <i class="fa fa-trash" id='trash' onClick={deleteSite} aria-hidden="true"></i>
+
+
                 </div>
                 <div className="outProgress">
                     <div className="inProgress" style={{width:`${(newTime-props.now)*1.7}%`}}></div>
@@ -212,8 +240,6 @@ const SiteBox = (props) => {
             </div>
         )
     }
-    
-
 }
 
 export default SiteBox
