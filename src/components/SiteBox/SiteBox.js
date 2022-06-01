@@ -2,7 +2,13 @@ import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 import './SiteBox.css'
 import Address from '../../Address';
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+
 const SiteBox = (props) => {
+
+    const States = useSelector(state => state);
+    const dispatch = useDispatch();
 
     const [loadingStyle,SetLoadingStyle]=useState(127)
     const [loading,SetLoading]=useState(false)
@@ -137,7 +143,6 @@ const SiteBox = (props) => {
     }
 
     const deleteSite=()=>{
-        alert('yes')
         axios.post(Address+'/deletesite',{
             address:props.Address
         },{
@@ -156,12 +161,12 @@ const SiteBox = (props) => {
     }
 
     useEffect(()=>{
-        if((newTime-props.now)<=0){
+        if((newTime-States.NowTime)<=0){
             SetCode('No Code!')
-            SetNewTime(props.now)
+            SetNewTime(States.NowTime)
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[(newTime-props.now)])
+    },[(newTime-States.NowTime)])
 
     if(props.boxID===0){
         return (
@@ -202,7 +207,7 @@ const SiteBox = (props) => {
 
                 </div>
                 <div className="outProgress">
-                    <div className="inProgress" style={{width:`${(newTime-props.now)*1.7}%`}}></div>
+                    <div className="inProgress" style={{width:`${(newTime-States.NowTime)*1.7}%`}}></div>
                 </div>
             </div>
         )
@@ -235,7 +240,7 @@ const SiteBox = (props) => {
                     <h5 style={{margin:"20px"}} id="showCode" className={props.Address}>{code}</h5>
                 </div>
                 <div className="outProgress">
-                    <div className="inProgress" style={{width:`${(newTime-props.now)*1.7}%`}}></div>
+                    <div className="inProgress" style={{width:`${(newTime-States.NowTime)*1.7}%`}}></div>
                 </div>
             </div>
         )

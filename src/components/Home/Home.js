@@ -5,7 +5,6 @@ import Address from '../../Address'
 import { useState,useEffect } from 'react'
 
 const Home = () => {
-
     const [loading,SetLoading]=useState(false)
     const [loadingStyle,SetLoadingStyle]=useState(127)
 

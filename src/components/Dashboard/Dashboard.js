@@ -3,7 +3,14 @@ import React,{useEffect,useState} from 'react'
 import SiteBox from '../SiteBox/SiteBox'
 import './Dashboard.css'
 import Address from '../../Address'
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+
+
 const Dashboard = () => {
+
+    const States = useSelector(state => state);
+    const dispatch = useDispatch();
     
     function getCookie(cname) {
         var name = cname + "=";
@@ -23,7 +30,6 @@ const Dashboard = () => {
 
     const onetime=new Date()
     const [AddedSites,setAddedSites]=useState([])
-    const [now,setNow]=useState(Math.floor(onetime.getTime()/1000))   
     const [faza,SetFaza]=useState(0)
     useEffect(()=>{
         const token=getCookie('token')
@@ -56,7 +62,7 @@ const Dashboard = () => {
         function countrt(){
             setTimeout(function(){
                 const time=new Date()
-                setNow(Math.floor(time.getTime()/1000))
+                dispatch({type:"CHANGENOW",value:Math.floor(time.getTime()/1000)})
                 countrt()
             },1000)
         }
@@ -71,7 +77,7 @@ const Dashboard = () => {
                 AddedSites.map((item,index)=>{
                     return(
                         <div id="dashBOX">
-                            <SiteBox boxID={item.boxNumber} Address={item.Address} Username={item.Username} key={item.Address} now={now} index={index}/>
+                            <SiteBox boxID={item.boxNumber} Address={item.Address} Username={item.Username} key={item.Address} index={index}/>
                             <div id="notif">copied to ClipBoard</div>
                         </div>
                     )

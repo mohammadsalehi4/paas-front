@@ -52,11 +52,11 @@ const Header = (props) => {
                 
                 <a href='/userSignUp' id='ju'>not register? join us!{'  '}<i class="fa fa-pencil"></i></a>
                 <div id="menuItems">
-                    <a className="navLink" href="/">Home{' '}<i class="fa fa-home"></i></a>
-                    <a className="navLink" href="/siteLogin">site login{' '}<i class="fa fa-sign-in"></i></a>
-                    <a className="navLink" href="/userSignUp">user signup{' '}<i class="fa fa-male"></i></a>
-                    <a className="navLink" href="/SiteSignUp">site signup{' '}<i class="fa fa-sitemap"></i></a>
-                    <a className="navLink" href="/DeleteAcc">Delete Acc{' '}<i class="fa fa-trash"></i></a>
+                    <a className="navLink" href="/"><p>Home</p>{' '}<i class="fa fa-home"></i></a>
+                    <a className="navLink" href="/siteLogin"><p>site login</p>{' '}<i class="fa fa-sign-in"></i></a>
+                    <a className="navLink" href="/userSignUp"><p>user signup</p>{' '}<i class="fa fa-male"></i></a>
+                    <a className="navLink" href="/SiteSignUp"><p>site signup</p>{' '}<i class="fa fa-sitemap"></i></a>
+                    <a className="navLink" href="/DeleteAcc"><p>Delete Acc</p>{' '}<i class="fa fa-trash"></i></a>
 
                 </div>
             </div>
@@ -65,21 +65,27 @@ const Header = (props) => {
                 <div id="menu" className='homeMenu'><i class="fa fa-navicon"></i></div>
                 <div id="menuItems">
                 <a href="/" onClick={siteExit} className="navLink firstLink logout">
-                    logOut{' '}<i class="fa fa-sign-out"></i>
+                    <p>logOut</p>{' '}<i class="fa fa-sign-out"></i>
                 </a>
                 {mode==='user' ? 
-                    <a href="/addNewSite" className="navLink">
-                        add new site{' '}<i class="fa fa-pencil-square-o"></i>
+                    <a href="/" className="navLink ">
+                        <p>Home</p>{' '}<i class="fa fa-home"></i>
                     </a>
                 : null}
                 {mode==='user' ? 
-                    <a href="/addEmail" className="navLink">
-                        add Email{' '}<i class="fa fa-pencil-square-o"></i>
+                    <a href="/addNewSite" className="navLink ">
+                        <p>add new site</p>{' '}<i class="fa fa-pencil-square-o"></i>
+                    </a>
+                : null}
+
+                {mode==='user' ? 
+                    <a href="/addEmail" className="navLink ">
+                        <p>add Email</p>{' '}<i class="fa fa-pencil-square-o"></i>
                     </a>
                 : null}
                 {mode==='user' ? 
-                    <a href="/changeNumber" className="navLink">
-                        change Number{' '}<i class="fa fa-pencil-square-o"></i>
+                    <a href="/changeNumber" className="navLink ">
+                        <p>change Number</p>{' '}<i class="fa fa-pencil-square-o"></i>
                     </a>
                 : null}
 

@@ -15,6 +15,7 @@ const Footer = () => {
                         <a href="https://www.instagram.com/mohammad_salehi_4/" className="facebook"><i class="fa fa-instagram" aria-hidden="true"></i>
                         </a>
                         <a href="/" className="telegram"><i className="fa fa-telegram"></i></a>
+
                     </div>
                 </div>
                 <div className="middle1">

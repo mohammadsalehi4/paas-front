@@ -230,7 +230,9 @@ body{
         bottom: 0px;
         width: 100%;
         overflow-y:unset;
-        top:50px
+        top:50px;
+        display: none;
+        
     }
     
     #myFooter .social-networks a {
