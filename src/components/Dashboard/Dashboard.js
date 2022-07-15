@@ -40,7 +40,6 @@ const Dashboard = () => {
             }
         })
         .then(response=>{
-           
             if(response.data.success===true){
                 setAddedSites([])
                 if(response.data.sites.length===0){
@@ -56,7 +55,6 @@ const Dashboard = () => {
                         }
                     ])
                 }
-                
             }
         })
         function countrt(){

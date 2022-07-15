@@ -186,29 +186,21 @@ header{
 }
 
 @media only screen and (max-device-width:768px){
-    header{
-        position: relative;
-        opacity: 1;
-        height: 110px;
-
-    }
-
-    #homeMenu{
-        display:inline-block;
-    }
-
-    #menu{
-        display: inline-block;
-    }
-
     #psolp{
         display: none;
     }
-    
-    #pasLink{
-        font-size: 90px;
+
+    header{
+        position: relative;
+        opacity: 1;
+        height: 90px;
+        top: -10px;
     }
     
+    #menu{
+        display: block;
+    }
+
     .firstLink{
         margin-right: 0px;
     }
@@ -216,66 +208,61 @@ header{
     #pas{
         width: 100%;
         text-align: center;
-        margin: 10px 0px;
+        margin: 12px 0px;
+        
+    }
 
+    #pasLink{
+        font-size: 70px;
     }
     
     #menuBox{
         position: absolute;
-        top: 10px;
+        top: 17px;
         direction: ltr;
         color: black;
         width: 100%;
-        left: 0px;
         margin-left: 0px;
+        margin-top: 0px;
         
     }
     #menu{
         position: absolute;
         text-align: center;
-        border-style: solid;
-
-        width: 60px;
-        height: 60px;
+        border-radius: 20px;
+        padding: 10px 13px;
         text-align: center;        
-        left: 3%;
-        top: 12px;
+        left: 0%;
+
+        margin-left: 20px;
+        font-size: 40px;
         color: white;
-        font-size: 60px;
-        display: none;
     }
     #menuBox:hover #menuItems{
         display: inline-block;
-        z-index: 100;
     }
     #menuItems{
-        position: fixed;
+        display: none;
+        position: relative;
+        background-color: rgb(0, 27, 77);
+        top: 70px;
         border-radius: 2px;
+        overflow: hidden;
         width: 100%;
-        bottom: 0px;
-
+        
     }
     .navLink{
         padding: 10px;
-        display: inline-block;
+        display: block;
         border-radius: 0px;
-        margin: 0px auto;
+        top: 0px;
+        margin: 0px;
         border-bottom-style: solid;
         border-bottom-width: 1px;
         border-bottom-color: rgb(0, 0, 0);
         color: white;
-        font-size: 70px;
-        background-color: rgb(0, 27, 77);
-        padding: 30px 20px;
-        width: 15.9%;
-        text-align: center;
+        padding: 18px 35px;
+        font-size: 30px;
     }
 
-    .navLink p{
-        display: none;
-    }
-
-    .navLink2{
-        width: 20.9%;
-    }
 }

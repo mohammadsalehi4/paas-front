@@ -38,7 +38,6 @@ const Header = (props) => {
         window.location.assign("/")
     }
     
-    
     useEffect(()=>{
         setLogin(props.isLogin)
     },[props])
@@ -65,27 +64,27 @@ const Header = (props) => {
                 <div id="menu" className='homeMenu'><i class="fa fa-navicon"></i></div>
                 <div id="menuItems">
                 <a href="/" onClick={siteExit} className="navLink firstLink logout">
-                    <p>logOut</p>{' '}<i class="fa fa-sign-out"></i>
+                    <p className='HTitle'>logOut</p>{' '}<i class="fa fa-sign-out"></i>
                 </a>
                 {mode==='user' ? 
                     <a href="/" className="navLink ">
-                        <p>Home</p>{' '}<i class="fa fa-home"></i>
+                        <p className='HTitle'>Home</p>{' '}<i class="fa fa-home"></i>
                     </a>
                 : null}
                 {mode==='user' ? 
                     <a href="/addNewSite" className="navLink ">
-                        <p>add new site</p>{' '}<i class="fa fa-pencil-square-o"></i>
+                        <p className='HTitle'>add new site</p>{' '}<i class="fa fa-pencil-square-o"></i>
                     </a>
                 : null}
 
                 {mode==='user' ? 
                     <a href="/addEmail" className="navLink ">
-                        <p>add Email</p>{' '}<i class="fa fa-pencil-square-o"></i>
+                        <p className='HTitle'>add Email</p>{' '}<i class="fa fa-pencil-square-o"></i>
                     </a>
                 : null}
                 {mode==='user' ? 
                     <a href="/changeNumber" className="navLink ">
-                        <p>change Number</p>{' '}<i class="fa fa-pencil-square-o"></i>
+                        <p className='HTitle'>change Number</p>{' '}<i class="fa fa-pencil-square-o"></i>
                     </a>
                 : null}
 

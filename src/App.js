@@ -81,30 +81,29 @@ const App = () => {
     return (
         <Router>
             {loading ? 
-                    <HomeLoading/> 
+                <HomeLoading/> 
                 :
-                    <><Header isLogin={login} mode={mode} /><main className="py-3">
-                        {!login ? <Route path="/" component={Home} exact />
-                        : (mode === 'user' ?
-                        (<Route path="/" component={Dashboard} exact />)
-                        : <Route path="/" component={Home} exact />)}
-                        <Route path="/userSignUp" component={UserSignUp} />
-                        <Route path="/SiteSignUp" component={SiteSignUp} />
-                        <Route path="/RecoveryAcc" component={Recovery} />
-                        <Route path="/DeleteAcc" component={DeleteAcc} />
-                        <Route path="/addEmail" component={AddEmail} />
-                        <Route path="/changeNumber" component={ChangeNumber} />
-                        <Route path="/addNewSite" component={AddNewSite} />
-                        <Route path="/siteLogin" component={SiteLogin} />
-                        <Route path="/Description" component={Description} />
-                        <Route path="/siteRecovery" component={siteRecovery} />
-                        <Route path="/changePassword/:mode/:ID/:code" component={ChangePassword} />
-                        <Route path="/delByLink/:Email/:code" component={DelByLink} />
-                        <Route path="/SetNumber/:lastNumber/:newNumber/:code" component={SetNumber} />
-                        <Route path="/autologin/:Address" component={AutoLogin} />
-                    </main><Footer /></>
+                <><Header isLogin={login} mode={mode} /><main className="py-3">
+                    {!login ? <Route path="/" component={Home} exact />
+                    : (mode === 'user' ?
+                    (<Route path="/" component={Dashboard} exact />)
+                    : <Route path="/" component={Home} exact />)}
+                    <Route path="/userSignUp" component={UserSignUp} />
+                    <Route path="/SiteSignUp" component={SiteSignUp} />
+                    <Route path="/RecoveryAcc" component={Recovery} />
+                    <Route path="/DeleteAcc" component={DeleteAcc} />
+                    <Route path="/addEmail" component={AddEmail} />
+                    <Route path="/changeNumber" component={ChangeNumber} />
+                    <Route path="/addNewSite" component={AddNewSite} />
+                    <Route path="/siteLogin" component={SiteLogin} />
+                    <Route path="/Description" component={Description} />
+                    <Route path="/siteRecovery" component={siteRecovery} />
+                    <Route path="/changePassword/:mode/:ID/:code" component={ChangePassword} />
+                    <Route path="/delByLink/:Email/:code" component={DelByLink} />
+                    <Route path="/SetNumber/:lastNumber/:newNumber/:code" component={SetNumber} />
+                    <Route path="/autologin/:Address" component={AutoLogin} />
+                </main><Footer /></>
             }
-
         </Router>
     )
 }
