@@ -203,8 +203,6 @@ const SiteBox = (props) => {
                             </button>
                         }
                     <i class="fa fa-trash" id='trash' onClick={deleteSite} aria-hidden="true"></i>
-
-
                 </div>
                 <div className="outProgress">
                     <div className="inProgress" style={{width:`${(newTime-States.NowTime)*1.7}%`}}></div>
@@ -214,30 +212,38 @@ const SiteBox = (props) => {
     }else{
         return (
             <div className="siteBox">
+                <div id='SBLogo'></div>
+
                 <div id="leftDiv">
+
                     <h3 id="Address">{props.Address}</h3>
                     <p id="username">{props.Username}</p>
-                    {
-                    !loading ?
-                        <button className="inp2" id="getCode" onClick={getCode}>get Code</button>
-                    :
-                        <button className="inp2" id="getCode" onClick={getCode}>
-                            <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
-                            <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
-                        </button>
-                    }
-                    {
-                    !loading1 ?
-                        <button className="inp2" id="getCode" onClick={autoLogin}>Auto Login</button>
-                    :
-                        <button className="inp2" id="getCode" onClick={autoLogin}>
-                            <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
-                            <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
-                        </button>
-                    }
                 </div>
+
                 <div id="rightDiv">
                     <h5 style={{margin:"20px"}} id="showCode" className={props.Address}>{code}</h5>
+
+                </div>
+                <div id='SmiddleDiv'>
+                    {
+                        !loading ?
+                            <button  id="getCode" onClick={getCode}>get Code</button>
+                        :
+                            <button  id="getCode" onClick={getCode}>
+                                <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
+                                <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
+                            </button>
+                        }
+                        {
+                        !loading1 ?
+                            <button  id="getCode" onClick={autoLogin}>Auto Login</button>
+                        :
+                            <button  id="getCode" onClick={autoLogin}>
+                                <div className='loadingCircle loadingCircle1' style={{background:`rgb(${loadingStyle}, ${loadingStyle}, ${loadingStyle})`}}></div>
+                                <div className='loadingCircle loadingCircle2' style={{background:`rgb(${255-loadingStyle}, ${255-loadingStyle}, ${255-loadingStyle})`}}></div>
+                            </button>
+                        }
+                    <i class="fa fa-trash" id='trash' onClick={deleteSite} aria-hidden="true"></i>
                 </div>
                 <div className="outProgress">
                     <div className="inProgress" style={{width:`${(newTime-States.NowTime)*1.7}%`}}></div>
